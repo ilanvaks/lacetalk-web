@@ -3,14 +3,22 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './scenes/Home';
 import "bootstrap/dist/css/bootstrap.min.css"
 import './styles/App.css';
+import AddSneaker from './scenes/AddSneaker';
 
 function App() {
+
+  const [sneakers, setSneakers] = useState()
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <Home/>
-      </header>
-    </div>
+   <>
+   <BrowserRouter>
+    <Routes>
+      <Route path='/addsneaker' element={<AddSneaker setSneakers={setSneakers}/>}/>
+      <Route path='/' element={<Home sneakers={sneakers} setSneakers={setSneakers}/>}/>
+    </Routes>
+   </BrowserRouter>
+   </>
   );
 }
 
