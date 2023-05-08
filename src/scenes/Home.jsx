@@ -19,15 +19,15 @@ export default function Home ({sneakers, setSneakers}) {
       { !sneakers
           ? "Loading..."
           : sneakers.map(
-            (sneaker) => (
-              <div className="main-container">
-              <div key={sneakers.id} className="show-container button-effect">
-                <h2>{sneaker.title}</h2>
-                <img className="sneakers-picture" src={sneaker.poster} alt="" />
-                <h2>{sneaker.link}</h2>
-                <h2>{sneaker.release}</h2>
-                <h2>{sneaker.brand}</h2>
-                <h2>{sneaker.about}</h2>
+            (element) => (
+              <div className="main-container" key={element._id}>
+              <div  className="show-container button-effect">
+                <h2>{element.title}</h2>
+                <img className="sneakers-picture" src={element.poster} alt="" />
+                <h2>{element.link}</h2>
+                <h2>{element.release}</h2>
+                <h2>{element.brand}</h2>
+                <h2>{element.about}</h2>
               </div>
               </div>
             )
