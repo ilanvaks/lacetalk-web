@@ -16,6 +16,7 @@ function App() {
     <Routes>
       <Route path='/addsneaker' element={<AddSneaker setSneakers={setSneakers}/>}/>
       <Route path='/' element={<Home sneakers={sneakers} setSneakers={setSneakers}/>}/>
+      <Route exact path='*' element={<Home sneakers={sneakers} setSneakers={setSneakers}/>}></Route>
     </Routes>
    </BrowserRouter>
    </>

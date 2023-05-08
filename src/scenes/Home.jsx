@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import "../styles/Home.css"
 
 export default function Home ({sneakers, setSneakers}) {
   useEffect( () => {
@@ -19,8 +20,13 @@ export default function Home ({sneakers, setSneakers}) {
             (sneaker) => (
               <div key={sneakers.id} className="show-container button-effect">
                 <h2>{sneaker.title}</h2>
-                <img src={sneaker.poster} alt="" />
-                <p className="season-container">Sneakers: {sneakers.brand}</p>
+                <img className="sneakers-picture" src={sneaker.poster} alt="" />
+                <h2>{sneaker.link}</h2>
+                <h2>{sneaker.release}</h2>
+                <h2>{sneaker.brand}</h2>
+                <h2>{sneaker.about}</h2>
+                <h2></h2>
+                <h2></h2>
               </div>
             )
           )

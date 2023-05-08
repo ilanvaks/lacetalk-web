@@ -80,7 +80,7 @@ export default function AddSneaker( {setSneakers} ) {
             </label>
 
 
-          <input type="submit" value="Add Shoe" />
+          <input type="submit" value="Kick It!" />
       </form>
     </>
   )
