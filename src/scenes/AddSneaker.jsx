@@ -30,6 +30,7 @@ export default function AddSneaker( {setSneakers} ) {
 
   return (
     <>
+    <div className="whole-form ms-2">
     <h2>Add Kicks</h2>
       <form onSubmit={handleAddKicks}>
         <label htmlFor="title">Title 
@@ -82,6 +83,7 @@ export default function AddSneaker( {setSneakers} ) {
 
           <input type="submit" value="Kick It!" />
       </form>
+      </div>
     </>
   )
 }

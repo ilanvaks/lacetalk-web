@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import { Modal, Button} from "react-bootstrap"
 import "../styles/Home.css"
 
 export default function Home ({sneakers, setSneakers}) {
@@ -9,6 +10,7 @@ export default function Home ({sneakers, setSneakers}) {
     .catch(alert)
   },[])
 
+  
 
   return (
     <>
@@ -18,6 +20,7 @@ export default function Home ({sneakers, setSneakers}) {
           ? "Loading..."
           : sneakers.map(
             (sneaker) => (
+              <div className="main-container">
               <div key={sneakers.id} className="show-container button-effect">
                 <h2>{sneaker.title}</h2>
                 <img className="sneakers-picture" src={sneaker.poster} alt="" />
@@ -25,8 +28,7 @@ export default function Home ({sneakers, setSneakers}) {
                 <h2>{sneaker.release}</h2>
                 <h2>{sneaker.brand}</h2>
                 <h2>{sneaker.about}</h2>
-                <h2></h2>
-                <h2></h2>
+              </div>
               </div>
             )
           )
