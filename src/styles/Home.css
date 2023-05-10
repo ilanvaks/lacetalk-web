@@ -1,9 +1,13 @@
-.sneakers-picture {
+.sneakers-picture-modal {
   aspect-ratio: 3/4;
   border: 15px red solid;
   width: 300px;
   object-fit: cover;
   aspect-ratio: 1 / 1;
+}
+
+.modal-open {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .main-container {
@@ -16,4 +20,12 @@
   border: 15px solid black;
 }
 
+.show-container {
+  border: 15px solid blue
+}
 
+.sneakers-picture-modal {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
