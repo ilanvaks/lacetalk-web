@@ -2,21 +2,18 @@ import { BsTrash } from 'react-icons/bs';
 import { Button } from "react-bootstrap";
 import { useState } from "react";
 
-export default function DeleteSneaker({ taskId, sneakers, setSneakers }) {
+export default function DeleteSneaker({ sneakerId, setSneakers }) {
   const handleDelete = (e) => {
     e.preventDefault();
 
-    fetch(`https://lacetalk-iv.web.app/sneaker/${taskId}`, {
+    fetch(`https://lacetalk-iv.web.app/sneaker/${sneakerId}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
       },
     })
       .then((resp) => resp.json())
-      .then(() => {
-        const updatedSneakers = sneakers.filter((sneaker) => sneaker._id !== taskId);
-        setSneakers(updatedSneakers);
-      })
+      .then(setSneakers)
       .catch(console.error);
   };
 

@@ -1,0 +1,41 @@
+.whole-form {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.whole-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.whole-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.whole-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.whole-form input,
+.whole-form select {
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.whole-form select {
+  margin-bottom: 20px;
+}
+
+.kickit-button {
+  align-self: center;
+  width: 150px;
+  margin-top: 20px;
+}

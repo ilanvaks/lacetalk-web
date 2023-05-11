@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Container, Row, Col, Modal, Button, Image } from 'react-bootstrap';
 import { BiTrash } from 'react-icons/bi'
+import { Card } from 'react-bootstrap';
 import Gallery from "../components/Gallery"
 import DeleteSneaker from './DeleteSneaker';
+import "../styles/Home.css"
 
 export default function Home({ sneakers, setSneakers }) {
   useEffect(() => {
@@ -31,20 +33,27 @@ export default function Home({ sneakers, setSneakers }) {
         {!sneakers ? 
           <h1 className="loadingText-container text-center">Loading...</h1>
          :
-          <Container>
+
+          <Container fluid>
+
             <Row className="justify-content-center">
-              {sneakers.map((sneaker) => (
-                <Col key={sneaker._id} sm={12} md={6} lg={4} className="main-container">
+              {sneakers.map((element) => (
+                <Col key={element._id} sm={11} md={4} lg={4} className="main-container">
+                  <Card className="singledKick-Card">
                   <div className="show-container button-effect">
-                    <h2>{sneaker.title}</h2>
+                    <h2>{element.title}</h2>
                     <Image 
                     fluid
                       className="sneakers-picture"
-                      src={sneaker.poster}
+                      src={element.poster}
                       alt=""
-                      onClick={() => handleModalShow(sneaker)}
+                      onClick={() => handleModalShow(element)}
                     />
+                    <div className='Delete-button'>
+                     <DeleteSneaker sneakerId={element._id} sneakers={sneakers} setSneakers={setSneakers} />
+                     </div>
                   </div>
+                  </Card>
                 </Col>
               ))}
             </Row>
@@ -53,7 +62,7 @@ export default function Home({ sneakers, setSneakers }) {
       </div>
 
       {selectedSneaker &&
-        <Modal show={showModal} onHide={handleModalClose}>
+        <Modal className='Kick-Modal' show={showModal} onHide={handleModalClose}>
           <Modal.Header closeButton>
             <Modal.Title>Sneaker Details</Modal.Title>
           </Modal.Header>
@@ -65,7 +74,7 @@ export default function Home({ sneakers, setSneakers }) {
               <p>{selectedSneaker.release}</p>
               <p>{selectedSneaker.brand}</p>
               <p>{selectedSneaker.about}</p>
-              <DeleteSneaker taskId={selectedSneaker._id} sneakers={sneakers} setSneakers={setSneakers} />
+             
             </div>
           </Modal.Body>
           <Modal.Footer>
