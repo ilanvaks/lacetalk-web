@@ -25,6 +25,13 @@ export default function AddSneaker({ setSneakers }) {
           return;
         }
         setSneakers(data);
+        setTitle("") 
+        setPoster() 
+        setLink("") 
+        setRelease("")
+        setBrand("") 
+        setAbout("") 
+        // resetFormFields()
       })
       .catch(alert);
   };
@@ -107,7 +114,7 @@ export default function AddSneaker({ setSneakers }) {
         </Form.Group>
         <br />
 
-        <Button className="kickit-button" variant="primary" type="submit">
+        <Button className="kickit-button" variant="primary" type="submit" onClick={handleAddKicks}>
           Kick It!
         </Button>
       </Form>

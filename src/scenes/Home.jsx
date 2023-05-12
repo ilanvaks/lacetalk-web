@@ -5,6 +5,7 @@ import { Card } from 'react-bootstrap';
 import Gallery from "../components/Gallery"
 import DeleteSneaker from './DeleteSneaker';
 import "../styles/Home.css"
+import UpdateSneakers from '../components/Gallery/UpdateSneakers';
 
 export default function Home({ sneakers, setSneakers }) {
   useEffect(() => {
@@ -17,8 +18,8 @@ export default function Home({ sneakers, setSneakers }) {
   const [showModal, setShowModal] = useState(false);
   const [selectedSneaker, setSelectedSneaker] = useState(null);
   const handleModalClose = () => setShowModal(false);
-  const handleModalShow = (sneaker) => {
-    setSelectedSneaker(sneaker);
+  const handleModalShow = (element) => {
+    setSelectedSneaker(element);
     setShowModal(true);
   };
 
@@ -50,7 +51,9 @@ export default function Home({ sneakers, setSneakers }) {
                       onClick={() => handleModalShow(element)}
                     />
                     <div className='Delete-button'>
+                      
                      <DeleteSneaker sneakerId={element._id} sneakers={sneakers} setSneakers={setSneakers} />
+                     <UpdateSneakers sneakerId={element._id} sneakers={sneakers} setSneakers={setSneakers} />
                      </div>
                   </div>
                   </Card>

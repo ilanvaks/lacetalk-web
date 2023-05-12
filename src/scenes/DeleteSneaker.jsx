@@ -1,6 +1,7 @@
 import { BsTrash } from 'react-icons/bs';
 import { Button } from "react-bootstrap";
-import { useState } from "react";
+import { Trash } from 'react-bootstrap-icons';
+import "../../src/styles/DeleteSneaker.css"
 
 export default function DeleteSneaker({ sneakerId, setSneakers }) {
   const handleDelete = (e) => {
@@ -18,8 +19,8 @@ export default function DeleteSneaker({ sneakerId, setSneakers }) {
   };
 
   return (
-    <Button onClick={handleDelete} variant="text">
-      <BsTrash size={30} />
+    <Button className='trash-button bg-primary' size='' onClick={handleDelete} variant="text">
+     <Trash size={"30px"} /> <span> Button </span>
     </Button>
   );
 }
