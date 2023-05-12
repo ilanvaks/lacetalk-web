@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import "../styles/AddSneaker.css"
+import "../styles/AddSneaker.css";
 
 export default function AddSneaker({ setSneakers }) {
   const [title, setTitle] = useState("");
@@ -25,12 +25,12 @@ export default function AddSneaker({ setSneakers }) {
           return;
         }
         setSneakers(data);
-        setTitle("") 
-        setPoster() 
-        setLink("") 
-        setRelease("")
-        setBrand("") 
-        setAbout("") 
+        setTitle("");
+        setPoster();
+        setLink("");
+        setRelease("");
+        setBrand("");
+        setAbout("");
         // resetFormFields()
       })
       .catch(alert);
@@ -39,17 +39,17 @@ export default function AddSneaker({ setSneakers }) {
   function convertFile(files) {
     if (files) {
       // picks the first file from all the files selected
-      const fileRef = files[0] || ""
+      const fileRef = files[0] || "";
       // picks the type so that it can send the right one to the database
-      const fileType = fileRef.type || ""
-      // sets reader as a new FileReader instance 
-      const reader = new FileReader()
+      const fileType = fileRef.type || "";
+      // sets reader as a new FileReader instance
+      const reader = new FileReader();
       // converts fileref (the File) to a binary string
-      reader.readAsBinaryString(fileRef)
+      reader.readAsBinaryString(fileRef);
       reader.onload = (ev) => {
         // convert it to base64
-        setPoster(`data:${fileType};base64,${window.btoa(ev.target.result)}`)
-      }
+        setPoster(`data:${fileType};base64,${window.btoa(ev.target.result)}`);
+      };
     }
   }
 
@@ -71,7 +71,7 @@ export default function AddSneaker({ setSneakers }) {
           <Form.Control
             type="file"
             // value={poster}
-            onChange={e => convertFile(e.target.files)}
+            onChange={(e) => convertFile(e.target.files)}
           />
         </Form.Group>
 
@@ -95,7 +95,7 @@ export default function AddSneaker({ setSneakers }) {
         <br />
 
         <Form.Select aria-label="Default select example">
-        <Form.Label>Brand</Form.Label>
+          <Form.Label>Brand</Form.Label>
           <option>Choose Brand!</option>
           <option value="1">Nike</option>
           <option value="2">Jordan</option>
@@ -114,7 +114,12 @@ export default function AddSneaker({ setSneakers }) {
         </Form.Group>
         <br />
 
-        <Button className="kickit-button" variant="primary" type="submit" onClick={handleAddKicks}>
+        <Button
+          className="kickit-button"
+          variant="primary"
+          type="submit"
+          onClick={handleAddKicks}
+        >
           Kick It!
         </Button>
       </Form>

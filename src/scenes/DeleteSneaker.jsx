@@ -1,7 +1,7 @@
-import { BsTrash } from 'react-icons/bs';
+import { BsTrash } from "react-icons/bs";
 import { Button } from "react-bootstrap";
-import { Trash } from 'react-bootstrap-icons';
-import "../../src/styles/DeleteSneaker.css"
+import { Trash } from "react-bootstrap-icons";
+import "../../src/styles/DeleteSneaker.css";
 
 export default function DeleteSneaker({ sneakerId, setSneakers }) {
   const handleDelete = (e) => {
@@ -19,8 +19,13 @@ export default function DeleteSneaker({ sneakerId, setSneakers }) {
   };
 
   return (
-    <Button className='trash-button bg-primary' size='' onClick={handleDelete} variant="text">
-     <Trash size={"30px"} /> <span> Button </span>
+    <Button
+      className="trash-button bg-primary"
+      size=""
+      onClick={handleDelete}
+      variant="text"
+    >
+      <Trash size={"30px"} /> <span> Button </span>
     </Button>
   );
 }
