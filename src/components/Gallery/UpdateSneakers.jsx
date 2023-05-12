@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useEffect } from "react";
 import { Modal } from "react-bootstrap";
-import {Image} from "react-bootstrap";
 import { PencilSquare, TrashFill } from "react-bootstrap-icons";
 import "../../styles/UpdateSneaker.css"
 
