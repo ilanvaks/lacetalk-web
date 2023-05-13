@@ -3,8 +3,7 @@ import { Form, Button } from "react-bootstrap";
 import { useEffect } from "react";
 import { Modal } from "react-bootstrap";
 import { PencilSquare, TrashFill } from "react-bootstrap-icons";
-import "../../styles/UpdateSneaker.css";
-
+import "../styles/UpdateSneaker.css"
 export default function UpdateSneakers({
   sneakerId,
   setSneakers,

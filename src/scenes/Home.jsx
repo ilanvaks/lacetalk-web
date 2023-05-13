@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Modal, Button, Image } from "react-bootstrap";
-import { BiTrash } from "react-icons/bi";
 import { Card } from "react-bootstrap";
-import Gallery from "../components/Gallery";
 import DeleteSneaker from "./DeleteSneaker";
 import "../styles/Home.css";
-import UpdateSneakers from "../components/Gallery/UpdateSneakers";
-
+import UpdateSneakers from "./UpdateSneakers.jsx";
 export default function Home({ sneakers, setSneakers }) {
   useEffect(() => {
     fetch("https://lacetalk-iv.web.app/sneaker")
@@ -25,7 +22,6 @@ export default function Home({ sneakers, setSneakers }) {
 
   return (
     <>
-      <Gallery />
       <div className="main-container">
         {!sneakers ? (
           <h1 className="loadingText-container text-center">Loading...</h1>
