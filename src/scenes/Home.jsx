@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col, Modal, Button, Image } from "react-bootstrap";
 import { Card } from "react-bootstrap";
 import DeleteSneaker from "./DeleteSneaker";
-import "../styles/Home.css";
 import UpdateSneakers from "./UpdateSneakers.jsx";
+import "../styles/Home.css";
+
 export default function Home({ sneakers, setSneakers }) {
   useEffect(() => {
     fetch("https://lacetalk-iv.web.app/sneaker")

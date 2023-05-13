@@ -16,11 +16,19 @@ export default function NavMenu() {
         />
         <Nav>
           <Nav.Item>
-            <Nav.Link as={Link} to="/AddSneaker">Add Kicks</Nav.Link>
+            <Nav.Link as={Link} to="/AddSneaker" className="nav-link">
+              Add Kicks</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <div className="AboutMe-container">
-            <Nav.Link as={Link} to="/AboutMe">About Me</Nav.Link>
+            <Nav.Link as={Link} to="/AboutMe" className="nav-link">
+              About Me</Nav.Link>
+            </div>
+          </Nav.Item>
+          <Nav.Item>
+            <div className="Login-Container">
+              <Nav.Link as={Link} to="/Login" className="nav-link">
+              Login</Nav.Link>
             </div>
           </Nav.Item>
         </Nav>
