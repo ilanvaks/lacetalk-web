@@ -22,15 +22,15 @@ export default function AddSneaker({ setSneakers }) {
       .then((data) => {
         if (data.message) {
           alert(data.message);
-          return;
+          setSneakers(data);
+          setTitle("");
+          setPoster();
+          setLink("");
+          setRelease("");
+          setBrand("");
+          setAbout("");
+          return
         }
-        setSneakers(data);
-        setTitle("");
-        setPoster();
-        setLink("");
-        setRelease("");
-        setBrand("");
-        setAbout("");
         // resetFormFields()
       })
       .catch(alert);
@@ -100,7 +100,6 @@ export default function AddSneaker({ setSneakers }) {
           <option value="1">Nike</option>
           <option value="2">Jordan</option>
           <option value="3">Adidas</option>
-          <option value="3"></option>
           onChange={(e) => setBrand(e.target.value)}
         </Form.Select>
 

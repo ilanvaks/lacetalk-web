@@ -5,9 +5,12 @@
 }
 
 .custom-navbar .nav-link {
-  font-size: 50px; /* Adjust the font size as desired */
+  font-size: 30px; /* Adjust the font size as desired */
 }
 
+.navbar-brand {
+  font-size: 30px;
+}
 
 .AboutMe-container {
   font-size: 30px;

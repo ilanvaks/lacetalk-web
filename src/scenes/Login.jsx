@@ -1,24 +1,28 @@
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import GoogleButton from 'react-google-button'
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { auth } from './secrets';
-import { useNavigate } from 'react-router-dom';
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import GoogleButton from "react-google-button";
+import { GoogleAuthProvider, signInWithPopup, signInWithRedirect } from "firebase/auth";
+import { auth } from "./secrets";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-export default function Login () {
+export default function Login({ user, setUser }) {
+  const navigate = useNavigate();
 
-  const navigate = useNavigate()
-
-  function handleGoogleLogin() {
-    const provider = new GoogleAuthProvider()
-    signInWithPopup(auth, provider)
-      .then((res) => {
-        console.log(res)
-        navigate('/')
-      })
-
+  const handleGoogleLogin = async () => {
+    try {
+      const provider = new GoogleAuthProvider()
+      const result = await signInWithPopup(auth, provider)
+      setUser(result.user)
+      navigate("/home")
+    }
+    catch (err) {
+      console.error(err)
+    }
+    // setUser(_user)
   }
 
+  // console.log(user)
 
   return (
     <Form>
@@ -33,20 +37,17 @@ export default function Login () {
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" placeholder="Password" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicCheckbox"></Form.Group>
       <Button variant="primary" type="submit">
         Submit
       </Button>
       <GoogleButton
-          className='google-login'
-          onClick={handleGoogleLogin}
-          type='light'
-          htmltype='submit'
-        >
-          Google
-        </GoogleButton>
+        className="google-login"
+        onClick={handleGoogleLogin}
+        type="light"
+        htmltype="submit"
+      >
+      </GoogleButton>
     </Form>
-
   );
 }

@@ -3,6 +3,7 @@ import { Container, Row, Col, Modal, Button, Image } from "react-bootstrap";
 import { Card } from "react-bootstrap";
 import DeleteSneaker from "./DeleteSneaker";
 import UpdateSneakers from "./UpdateSneakers.jsx";
+import UpdateVote from "./UpdateVote.jsx"
 import "../styles/Home.css";
 
 export default function Home({ sneakers, setSneakers }) {
@@ -48,6 +49,7 @@ export default function Home({ sneakers, setSneakers }) {
                         onClick={() => handleModalShow(element)}
                       />
                     </div>
+                    <UpdateVote/>
                   </Card>
                 </Col>
               ))}

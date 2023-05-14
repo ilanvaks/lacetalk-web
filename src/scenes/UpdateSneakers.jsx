@@ -55,14 +55,6 @@ export default function UpdateSneakers({
     }
   }
 
-  const handleThumbsUp = () => {
-    setThumbsUp(thumbsUp + 1)
-  }
-
-  const handleThumbsDown = () => {
-    setThumbsDown(thumbsDown + 1)
-  }
-
   const handleEdit = (e) => {
     e.preventDefault();
 
@@ -84,6 +76,7 @@ export default function UpdateSneakers({
         setRelease("");
         setBrand("");
         setAbout("");
+        setShow(false);
         // resetFormFields()
       })
       .catch(alert);
@@ -91,8 +84,6 @@ export default function UpdateSneakers({
 
   return (
     <>
-      <Button onClick={handleThumbsUp}>👍 {thumbsUp}</Button>
-      <Button onClick={handleThumbsDown}>👎 {thumbsDown}</Button>
       <Button
         className="update-button bg-primary glow-on-hover"
         size="30px"
@@ -151,7 +142,6 @@ export default function UpdateSneakers({
                 <option value="1">Nike</option>
                 <option value="2">Jordan</option>
                 <option value="3">Adidas</option>
-                <option value="3"></option>
                 onChange={(e) => setBrand(e.target.value)}
               </Form.Select>
 
@@ -165,13 +155,6 @@ export default function UpdateSneakers({
               </Form.Group>
               <br />
 
-              <Button
-                className="p-2 btn-lg btn-edit"
-                variant="outline-info"
-                onClick={handleClose}
-              >
-                Close
-              </Button>
               <Button
                 className="p-2 btn-lg btn-save"
                 variant="outline-danger"
