@@ -6,11 +6,11 @@ export default function NavMenu({ user }) {
   console.log(user)
   return (
     <Navbar className="custom-navbar">
-      <Container>
+      <Container fluid>
         <Navbar.Brand href="/">Home</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+          <Nav>
             <Nav.Item>
               <Nav.Link as={Link} to="/AddSneaker" className="nav-link">
                 Add Kicks
@@ -42,18 +42,18 @@ export default function NavMenu({ user }) {
             ) : (
               <Nav.Item>
                 <div className="diplayname-container">
-              {user.displayName}
-              </div>
+                  {user.displayName}
+                </div>
               </Nav.Item>
             )}
           </Nav>
         </Navbar.Collapse>
-        <img
+        {/* <img
           src="../../../images/shoe360.gif"
           width="180"
           height="180"
           alt="Brand logo"
-        />
+        /> */}
       </Container>
     </Navbar>
   );

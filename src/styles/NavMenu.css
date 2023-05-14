@@ -1,17 +1,30 @@
-.custom-navbar {
+/* .custom-navbar {
   width: 100%;
   height: 140px;
   font-size: 50px;
-}
+} */
 
 .custom-navbar .nav-link {
   font-size: 30px; /* Adjust the font size as desired */
-}
+} 
 
-.navbar-brand {
+
+/* .navbar-brand {
+  font-size: 30px;
+} */
+
+.AboutMe-container {
   font-size: 30px;
 }
 
-.AboutMe-container {
+.navbar-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.diplayname-container{
   font-size: 30px;
 }
