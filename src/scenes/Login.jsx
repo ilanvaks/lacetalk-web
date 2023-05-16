@@ -8,6 +8,7 @@ import {
   signInWithEmailAndPassword
 } from "firebase/auth";
 import { auth } from "./secrets";
+import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -26,19 +27,34 @@ export default function Login({ user, setUser, setInUser }) {
     } catch (err) {
       console.error(err);
     }
-    // setUser(_user)
   };
-
-  // console.log(user)
 
   const handleSubmit = async () => {
     try {
-      const _user = await signInWithEmailAndPassword(auth, email, password);
-      setUser(_user);
+      const user = await signInWithEmailAndPassword(auth, email, password);
+      setUser(user);
     } catch {
       console.error("Wrong Email or Password");
     }
   };
+
+  // Function to handle navigation to the sign-up page
+  const handleSignUp = () => {
+    navigate("/signup");
+  }
+
+  // const handleLogout = () => {
+  //   signOut(auth)
+  //     .then(() => {
+  //       setUser(false);
+  //       // setGoogleUser(false);
+  //       navigate("/home")
+  //     })
+  //     .catch((error) => {
+  //       console.error(error);
+  //     });
+  // };
+
 
   return (
     <Form>
@@ -68,6 +84,9 @@ export default function Login({ user, setUser, setInUser }) {
       <Form.Group className="mb-3" controlId="formBasicCheckbox"></Form.Group>
       <Button variant="primary" type="submit">
         Submit
+      </Button>
+      <Button variant="secondary" onClick={handleSignUp}>
+        Sign Up
       </Button>
       <GoogleButton
         className="google-login"

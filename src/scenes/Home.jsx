@@ -49,7 +49,7 @@ export default function Home({ sneakers, setSneakers }) {
                         onClick={() => handleModalShow(element)}
                       />
                     </div>
-                    <UpdateVote/>
+                    <UpdateVote sneakerId={element._id} sneaker={element} setSneakers={setSneakers} />
                   </Card>
                 </Col>
               ))}
@@ -64,9 +64,6 @@ export default function Home({ sneakers, setSneakers }) {
           show={showModal}
           onHide={handleModalClose}
         >
-          <Modal.Header closeButton>
-            <Modal.Title>Sneaker Details</Modal.Title>
-          </Modal.Header>
           <Modal.Body>
             <div key={selectedSneaker._id}>
               <h2>{selectedSneaker.title}</h2>

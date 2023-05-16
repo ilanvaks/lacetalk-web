@@ -1,31 +1,70 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 
-export default function UpdateVote({ sneakerId }) {
-  const [thumbsUp, setThumbsUp] = useState(
-    Number(localStorage.getItem(`thumbsUp-${sneakerId}`)) || 0
-  );
-  const [thumbsDown, setThumbsDown] = useState(
-    Number(localStorage.getItem(`thumbsDown-${sneakerId}`)) || 0
-  );
+export default function UpdateVote({ sneakerId, sneaker, setSneakers }) {
+  // const [thumbsUp, setThumbsUp] = useState(0);
+  // const [thumbsDown, setThumbsDown] = useState(0);
 
-  useEffect(() => {
-    localStorage.setItem(`thumbsUp-${sneakerId}`, thumbsUp);
-    localStorage.setItem(`thumbsDown-${sneakerId}`, thumbsDown);
-  }, [thumbsUp, thumbsDown, sneakerId]);
+  // useEffect(() => {
+  //   // Fetch the current votes when the component mounts
+  //   fetchVotes();
+  // }, [sneakerId]);
 
-  const voteUp = () => {
-    setThumbsUp(prevThumbsUp => prevThumbsUp + 1);
+  // const fetchVotes = async () => {
+  //   try {
+  //     const response = await fetch(
+  //       `https://lacetalk-iv.web.app/sneaker/${sneakerId}`
+  //     );
+  //     const data = await response.json();
+  //     setThumbsUp(data.thumbsUp);
+  //     setThumbsDown(data.thumbsDown);
+  //   } catch (error) {
+  //     console.error("Error fetching votes:", error);
+  //   }
+  // };
+
+
+
+  const voteUp = async () => {
+    try {
+      const response = await fetch(
+        `https://lacetalk-iv.web.app/sneakers/${sneakerId}/voteUp`,
+        { method: "POST" }
+      );
+      const data = await response.json();
+      setSneakers(data)
+      // setThumbsUp(data.value.thumbsUp); // Updated line
+    } catch (error) {
+      console.error("Error voting up:", error);
+    }
   };
 
-  const voteDown = () => {
-    setThumbsDown(prevThumbsDown => prevThumbsDown + 1);
+  const voteDown = async () => {
+    try {
+      const response = await fetch(
+        `https://lacetalk-iv.web.app/sneakers/${sneakerId}/voteDown`,
+        { method: "POST" }
+      );
+      const data = await response.json();
+      setSneakers(data)
+      // setThumbsDown(data.value.thumbsDown); // Updated line
+    } catch (error) {
+      console.error("Error voting down:", error);
+    }
   };
+
+
 
   return (
     <div>
-      <Button className="voteButton" onClick={voteUp}>Thumb Up {thumbsUp}</Button>
-      <Button className="voteButton" onClick={voteDown}>Thumb Down {thumbsDown}</Button>
+      <Button className="voteButton" onClick={voteUp}>
+        Thumb Up {sneaker.thumbsUp}
+        {/* onClick={handleSubmit} */}
+      </Button>
+      <Button className="voteButton" onClick={voteDown}>
+        Thumb Down {sneaker.thumbsDown}
+        {/* onClick={handleSubmit} */}
+      </Button>
     </div>
   );
 }

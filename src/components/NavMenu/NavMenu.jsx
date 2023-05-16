@@ -7,7 +7,9 @@ export default function NavMenu({ user }) {
   return (
     <Navbar className="custom-navbar">
       <Container fluid>
+        <div className="brand-container">
         <Navbar.Brand href="/">Home</Navbar.Brand>
+        </div>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav>
@@ -42,7 +44,8 @@ export default function NavMenu({ user }) {
             ) : (
               <Nav.Item>
                 <div className="diplayname-container">
-                  {user.displayName}
+                 {user.displayName}
+                
                 </div>
               </Nav.Item>
             )}

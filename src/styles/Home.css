@@ -7,7 +7,6 @@
   
 }
 
-
 .modal-open {
   background-color: rgba(0, 0, 0, 0.7);
 }
@@ -38,4 +37,12 @@
   border-top: 1px solid darkgrey;
   margin-bottom: 5px;
   padding-top: 5px;
+}
+
+.Kick-Modal {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: brightness(100px);  
+  -webkit-backdrop-filter: brightness(100px);  
+  backdrop-filter: blur(3px);  
+  -webkit-backdrop-filter: blur(3px);
 }
