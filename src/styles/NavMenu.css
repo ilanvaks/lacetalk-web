@@ -1,5 +1,4 @@
 
-
 .custom-navbar .nav-link {
   font-size: 30px; /* Adjust the font size as desired */
 } 
@@ -8,21 +7,8 @@
   font-size: 30px;
 }
 
-/* .navbar-brand {
-  font-size: 30px;
-} */
-
-
 .AboutMe-container {
   font-size: 30px;
-}
-
-.navbar-image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .diplayname-container{

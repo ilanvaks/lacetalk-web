@@ -4,6 +4,7 @@ import { Card } from "react-bootstrap";
 import DeleteSneaker from "./DeleteSneaker";
 import UpdateSneakers from "./UpdateSneakers.jsx";
 import UpdateVote from "./UpdateVote.jsx"
+import Spinner from "react-bootstrap/Spinner";
 import "../styles/Home.css";
 
 export default function Home({ sneakers, setSneakers }) {
@@ -26,15 +27,15 @@ export default function Home({ sneakers, setSneakers }) {
     <>
       <div className="main-container">
         {!sneakers ? (
-          <h1 className="loadingText-container text-center">Loading...</h1>
+          <Spinner animation="border" variant="warning" />
         ) : (
           <Container fluid>
-            <Row className="justify-content-center">
+            <Row className="justify-content-center g-4">
               {sneakers.map((element) => (
                 <Col
                   key={element._id}
                   sm={11}
-                  md={4}
+                  md={6}
                   lg={4}
                   className="main-container"
                 >
@@ -49,6 +50,7 @@ export default function Home({ sneakers, setSneakers }) {
                         onClick={() => handleModalShow(element)}
                       />
                     </div>
+
                     <UpdateVote sneakerId={element._id} sneaker={element} setSneakers={setSneakers} />
                   </Card>
                 </Col>
@@ -78,22 +80,22 @@ export default function Home({ sneakers, setSneakers }) {
               <p>{selectedSneaker.brand}</p>
               <p>{selectedSneaker.about}</p>
             </div>
-          </Modal.Body>
-          <Modal.Footer>
+          
             <DeleteSneaker
               sneakerId={selectedSneaker._id}
               sneakers={sneakers}
               setSneakers={setSneakers}
-            />
+              />
             <UpdateSneakers
               sneakerId={selectedSneaker._id}
               sneakers={sneakers}
               setSneakers={setSneakers}
-            />
+              />
             <Button variant="secondary" onClick={handleModalClose}>
               Close
             </Button>
-          </Modal.Footer>
+            </Modal.Body>
+          
         </Modal>
       )}
     </>
