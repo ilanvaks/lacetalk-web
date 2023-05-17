@@ -42,14 +42,14 @@ export default function Home({ sneakers, setSneakers }) {
                 >
                   <Card className="singledKick-Card">
                     <div className="show-container button-effect">
-                      <h2>{element.title}</h2>
                       <Image
                         fluid
                         className="sneakers-picture"
                         src={element.poster}
                         alt=""
                         onClick={() => handleModalShow(element)}
-                      />
+                        />
+                        <h2>{element.title}</h2>
                     </div>
 
                     <UpdateVote sneakerId={element._id} sneaker={element} setSneakers={setSneakers} />
@@ -68,18 +68,18 @@ export default function Home({ sneakers, setSneakers }) {
           onHide={handleModalClose}
         >
           <Modal.Body>
-            <div key={selectedSneaker._id}>
-              <h2>{selectedSneaker.title}</h2>
+              <div key={selectedSneaker._id}>
               <Image
                 fluid
                 className="sneakers-picture-modal"
                 src={selectedSneaker.poster}
                 alt=""
-              />
-              <h2>{selectedSneaker.link}</h2>
-              <p>{selectedSneaker.release}</p>
-              <p>{selectedSneaker.brand}</p>
-              <p>{selectedSneaker.about}</p>
+                />
+                <h2>Name:{selectedSneaker.title}</h2>
+              <h2>Link:{selectedSneaker.link}</h2>
+              <p>Release:{selectedSneaker.release}</p>
+              <p>Brand:{selectedSneaker.brand}</p>
+              <p>About:{selectedSneaker.about}</p>
             </div>
           
             <DeleteSneaker
