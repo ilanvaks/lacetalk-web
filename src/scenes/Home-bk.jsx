@@ -44,7 +44,7 @@ export default function Home({ sneakers, setSneakers }) {
                     <h2>{element.about}</h2> */}
                   </div>
 
-                  <Modal show={showModal} onHide={handleModalClose}>
+                  <Modal show={showModal} onHide={handleModalClose} className='modal-container'>
         <Modal.Header closeButton>
           <Modal.Title>Sneaker Details</Modal.Title>
         </Modal.Header>

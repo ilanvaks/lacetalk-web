@@ -1,4 +1,9 @@
 
+.aal-container{
+  display: flex;
+  justify-content: flex-end;
+}
+
 .custom-navbar .nav-link {
   font-size: 30px; /* Adjust the font size as desired */
 } 

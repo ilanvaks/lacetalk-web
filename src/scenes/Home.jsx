@@ -5,6 +5,7 @@ import DeleteSneaker from "./DeleteSneaker";
 import UpdateSneakers from "./UpdateSneakers.jsx";
 import UpdateVote from "./UpdateVote.jsx"
 import Spinner from "react-bootstrap/Spinner";
+import Footer from "../components/Footer/Footer";
 import "../styles/Home.css";
 
 export default function Home({ sneakers, setSneakers }) {
@@ -98,6 +99,7 @@ export default function Home({ sneakers, setSneakers }) {
           
         </Modal>
       )}
+      <Footer/>
     </>
   );
 }

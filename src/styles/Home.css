@@ -42,3 +42,32 @@
   -webkit-backdrop-filter: blur(3px);
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.singledKick-Card {
+  overflow: hidden;
+}
+
+.button-effect .sneakers-picture{
+  display: block;
+  transform: scale(1.0);
+  transition: transform 0.73s ease-in-out;
+  z-index: 1;
+}
+
+.button-effect:hover .sneakers-picture {
+  transform: scale(1.10);
+  filter: drop-shadow(0 0 10px rgba(0, 5, 9, 0.319));
+}
+
+/* Disable hover effects on mobile */
+@media (max-width: 768px) {
+  .button-effect:hover
+  {
+      transform: scale(1.0);
+      filter: none;
+  }
+}
+
