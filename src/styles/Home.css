@@ -1,6 +1,10 @@
 
-.modal-body{
+.modal-body1{
   background-color: black
+}
+
+.modal-content {
+  background-color: rgb(255, 255, 255) !important;
 }
 
 .sneakers-picture {
@@ -11,6 +15,14 @@
 
 .modal-open {
   display: flex;
+}
+
+.whole-form {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
 }
 
 .main-container {
@@ -52,6 +64,10 @@
 }
 
 .singledKick-Card {
+  overflow: hidden;
+}
+
+.show-container {
   overflow: hidden;
 }
 

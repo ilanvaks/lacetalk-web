@@ -1,15 +1,25 @@
-
+/* 
 .aal-container{
   display: flex;
   justify-content: flex-end;
+  color: white !important;
+}
+  
+.right-container{
+  color: white !important;
+}
+
+.custom-navbar{
+  background-color: black !important;
 }
 
 .custom-navbar .nav-link {
-  font-size: 30px; /* Adjust the font size as desired */
+  font-size: 30px; /* Adjust the font size as desired 
 } 
 
 .brand-container {
   font-size: 30px;
+  color: white !important;
 }
 
 .AboutMe-container {
@@ -18,4 +28,4 @@
 
 .diplayname-container{
   font-size: 30px;
-}
+} */

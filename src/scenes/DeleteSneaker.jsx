@@ -1,9 +1,14 @@
-import { BsTrash } from "react-icons/bs";
-import { Button } from "react-bootstrap";
+import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify"
+import { Button, Toast } from "react-bootstrap";
 import { Trash } from "react-bootstrap-icons";
 import "../../src/styles/DeleteSneaker.css";
 
 export default function DeleteSneaker({ sneakerId, setSneakers }) {
+  const navigate = useNavigate();
+  const [show, setShow] = useState(false);
+
   const handleDelete = (e) => {
     e.preventDefault();
 
@@ -14,18 +19,26 @@ export default function DeleteSneaker({ sneakerId, setSneakers }) {
       },
     })
       .then((resp) => resp.json())
-      .then(setSneakers)
-      .catch(console.error);
+      .then((data) => {
+        setSneakers(data);
+        toast.success("Sneaker has been deleted")
+      })
+      .catch((error) => {
+      console.error(error)
+      toast.error("Failed to delete.")
+      }) 
   };
 
   return (
-    <Button
-      className="trash-button bg-primary"
-      size=""
-      onClick={handleDelete}
-      variant="text"
-    >
-      <Trash size={"30px"} /> <span> Button </span>
-    </Button>
+    <div>
+      <Button
+        className="trash-button bg-primary"
+        size=""
+        onClick={handleDelete}
+        variant="text"
+      >
+        <Trash size={"30px"} /> <span> Button </span>
+      </Button>
+    </div>
   );
 }

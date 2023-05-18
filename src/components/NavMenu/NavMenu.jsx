@@ -31,13 +31,13 @@ export default function NavMenu({ user, setUser }) {
   };
 
   return (
-    <Navbar className="custom-navbar" expand="lg">
+    <Navbar className="custom-navbar" variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand as={Link} to="/">Home</Navbar.Brand>
+        
+        <Navbar.Brand className="brand-container"  as={Link} to="/">Home</Navbar.Brand>
+        
+        <div className="right-container">
         <Nav className="mr-auto">
-          <Nav.Link as={Link} to="/AboutMe">
-            About Me
-          </Nav.Link>
           {!user ? (
             <Nav.Link as={Link} to="/Login">
               Add Sneaker
@@ -62,6 +62,7 @@ export default function NavMenu({ user, setUser }) {
             </>
           )}
         </Nav>
+        </div>
       </Container>
     </Navbar>
   );

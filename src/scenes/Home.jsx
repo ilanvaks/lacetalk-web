@@ -1,20 +1,25 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Modal, Button, Image } from "react-bootstrap";
 import { Card } from "react-bootstrap";
+import Header from "../components/Header/Header";
 import DeleteSneaker from "./DeleteSneaker";
 import UpdateSneakers from "./UpdateSneakers.jsx";
 import UpdateVote from "./UpdateVote.jsx"
 import Spinner from "react-bootstrap/Spinner";
 import Footer from "../components/Footer/Footer";
+
 import "../styles/Home.css";
 
-export default function Home({ sneakers, setSneakers }) {
+// export default function Home({ sneakers, setSneakers }) {
+  export default function Home() {
+  const [sneakers, setSneakers] = useState([]);
+  
   useEffect(() => {
     fetch("https://lacetalk-iv.web.app/sneaker")
       .then((resp) => resp.json())
       .then(setSneakers)
       .catch(alert);
-  }, []);
+  }, [sneakers]);
 
   const [showModal, setShowModal] = useState(false);
   const [selectedSneaker, setSelectedSneaker] = useState(null);
@@ -26,11 +31,11 @@ export default function Home({ sneakers, setSneakers }) {
 
   return (
     <>
+    <Header />
       <div className="main-container">
-        {!sneakers ? (
-          <Spinner animation="border" variant="warning" />
-        ) : (
-          <Container fluid>
+        {!sneakers 
+        ? (<Spinner animation="border" variant="warning" />) 
+        : (<Container fluid id="collection">
             <Row className="justify-content-center g-4">
               {sneakers.map((element) => (
                 <Col
@@ -67,7 +72,7 @@ export default function Home({ sneakers, setSneakers }) {
           show={showModal}
           onHide={handleModalClose}
         >
-          <Modal.Body>
+          <Modal.Body className="modal-body1">
               <div key={selectedSneaker._id}>
               <Image
                 fluid

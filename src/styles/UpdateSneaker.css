@@ -8,10 +8,6 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: #000;
-}
-
-.glow-on-hover {
   width: 220px;
   height: 50px;
   border: none;
@@ -24,7 +20,7 @@
   border-radius: 10px;
 }
 
-.glow-on-hover:before {
+.update-button:before {
   content: '';
   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
   position: absolute;
@@ -41,19 +37,19 @@
   border-radius: 10px;
 }
 
-.glow-on-hover:active {
+.update-button:active {
   color: #000
 }
 
-.glow-on-hover:active:after {
+.update-button:active:after {
   background: transparent;
 }
 
-.glow-on-hover:hover:before {
+.update-button:hover:before {
   opacity: 1;
 }
 
-.glow-on-hover:after {
+.update-button:after {
   z-index: -1;
   content: '';
   position: absolute;

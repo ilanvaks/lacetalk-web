@@ -1,3 +1,4 @@
+
 .navbar {
   background-color: aqua;
 }
@@ -9,3 +10,54 @@
 .body {
   background-image: url(https://wallpaperaccess.com/full/5206080.jpg);
 }
+
+
+
+
+
+.voteDownButton{
+  background-color: transparent;
+  color: grey;
+  border: none;
+}
+
+
+
+
+
+
+
+
+/* NAV */
+
+.aal-container{
+  display: flex;
+  justify-content: flex-end;
+  color: white !important;
+}
+  
+.right-container{
+  color: white !important;
+}
+
+.custom-navbar{
+  background-color: black !important;
+}
+
+.custom-navbar .nav-link {
+  font-size: 30px; /* Adjust the font size as desired */
+} 
+
+.brand-container {
+  font-size: 60px;
+  color: white !important;
+}
+
+.AboutMe-container {
+  font-size: 30px;
+}
+
+.diplayname-container{
+  font-size: 30px;
+}
+

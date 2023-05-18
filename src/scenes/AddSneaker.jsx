@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import { Form, Button,  } from "react-bootstrap";
 import "../styles/AddSneaker.css";
 
 export default function AddSneaker({ setSneakers }) {
+  const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [poster, setPoster] = useState("");
   const [link, setLink] = useState("");
@@ -34,6 +36,7 @@ export default function AddSneaker({ setSneakers }) {
         // resetFormFields()
       })
       .catch(alert);
+      navigate("/")
   };
 
   function convertFile(files) {

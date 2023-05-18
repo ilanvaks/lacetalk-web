@@ -29,7 +29,7 @@ function App() {
   
   const auth = getAuth(app)
 
-  const [sneakers, setSneakers] = useState("")
+  const [sneakers, setSneakers] = useState([])
   const [user, setUser] = useState()
 
   useEffect(() => {
@@ -51,18 +51,18 @@ function App() {
    <>
    <BrowserRouter>
     <NavMenu user={user} setUser={setUser}/>
-    <Header/>
 
     <Routes>
       {!user 
-      ?<Route path='/AddSneaker' element={<Login user={user} setUser={setUser}/>}/>
-      : <Route path='/AddSneaker' element={<AddSneaker setSneakers={setSneakers}/>}/>
+      ?<Route path='/AddSneaker' element={<Login user={user} setUser={setUser} />}/>
+      : <Route path='/AddSneaker' element={<AddSneaker setSneakers={setSneakers} />}/>
       }
-      <Route path='/Login' element={<Login user={user} setUser={setUser}/>}/>
-      <Route path='/' element={<Home sneakers={sneakers} setSneakers={setSneakers}/>}/>
-      <Route exact path='*' element={<Home sneakers={sneakers} setSneakers={setSneakers}/>}></Route>
-      <Route path='/Signup' element={<SignUpForm user={user} setUser={setUser}/>}/>
-      <Route exact path='/Gallery' element={<Gallery />}></Route>
+      <Route path='/Login' element={<Login user={user} setUser={setUser}/>} />      
+      <Route path='/Signup' element={<SignUpForm user={user} setUser={setUser}/>} />
+
+      {/* <Route path='/' element={<Home sneakers={sneakers} setSneakers={setSneakers}/>} /> */}
+      <Route path='/' element={<Home />} />
+      <Route path='*' element={<Home sneakers={sneakers} setSneakers={setSneakers}/>} />
     </Routes>
    </BrowserRouter>
    </>
