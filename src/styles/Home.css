@@ -9,7 +9,7 @@
 
 .sneakers-picture {
   aspect-ratio: 4/3;
-  width: 600px;
+  width: 380px;
   object-fit: cover;
 }
 
@@ -63,13 +63,6 @@
   box-sizing: border-box;
 }
 
-.singledKick-Card {
-  overflow: hidden;
-}
-
-.show-container {
-  overflow: hidden;
-}
 
 .button-effect .sneakers-picture{
   display: block;
@@ -80,7 +73,7 @@
 
 .button-effect:hover .sneakers-picture {
   transform: scale(1.10);
-  filter: drop-shadow(0 0 10px rgba(0, 5, 9, 0.319));
+  /* filter: drop-shadow(0 0 10px rgba(0, 5, 9, 0.319)); */
 }
 
 /* Disable hover effects on mobile */

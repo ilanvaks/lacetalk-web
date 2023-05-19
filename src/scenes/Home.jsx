@@ -12,16 +12,16 @@ import "../styles/Home.css";
 
 // export default function Home({ sneakers, setSneakers }) {
   export default function Home() {
-  const [sneakers, setSneakers] = useState([]);
+  const [sneakers, setSneakers] = useState();
   
   useEffect(() => {
     fetch("https://lacetalk-iv.web.app/sneaker")
       .then((resp) => resp.json())
       .then(setSneakers)
       .catch(alert);
-  }, [sneakers]);
+  },[]);
 
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState();
   const [selectedSneaker, setSelectedSneaker] = useState(null);
   const handleModalClose = () => setShowModal(false);
   const handleModalShow = (element) => {
@@ -34,8 +34,8 @@ import "../styles/Home.css";
     <Header />
       <div className="main-container">
         {!sneakers 
-        ? (<Spinner animation="border" variant="warning" />) 
-        : (<Container fluid id="collection">
+        ? <Spinner animation="border" variant="warning" />
+        : <Container fluid id="collection">
             <Row className="justify-content-center g-4">
               {sneakers.map((element) => (
                 <Col
@@ -54,7 +54,7 @@ import "../styles/Home.css";
                         alt=""
                         onClick={() => handleModalShow(element)}
                         />
-                        <h2>{element.title}</h2>
+                        <h3 className="mt-3">{element.title}</h3>
                     </div>
 
                     <UpdateVote sneakerId={element._id} sneaker={element} setSneakers={setSneakers} />
@@ -63,7 +63,7 @@ import "../styles/Home.css";
               ))}
             </Row>
           </Container>
-        )}
+        }
       </div>
 
       {selectedSneaker && (

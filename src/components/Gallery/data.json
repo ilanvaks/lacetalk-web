@@ -1,47 +1,146 @@
 [
 {
-"id": "1",
-"title": "title1",
-"poster": "image 1",
-"link": "link 1",
-"release": "releas1",
-"brand":"brand1",
-"about": "about1"
+"id": 1,
+"title": "Nike Air Mag",
+"poster": "",
+"link": "https://stockx.com/nike-air-mag-back-to-the-future",
+"release": "2011",
+"brand":"Nike",
+"about": "Nike Air Mags are iconic and futuristic sneakers that gained immense popularity due to their association with the film Back to the Future Part II. Released in 1989, the movie showcased a vision of the future, featuring self-lacing sneakers called Nike Air Mags. These sneakers instantly captivated the imagination of audiences worldwide. Inspired by this cinematic vision, Nike set out to turn fiction into reality. In 2011, they unveiled the limited edition Nike Air Mags, complete with self-lacing technology, glowing LED lights, and a design faithful to the film's depiction. The release generated tremendous excitement among sneaker enthusiasts and film fans alike. The Nike Air Mags became highly coveted collector's items, symbolizing the fusion of technology, pop culture, and sneaker innovation. Beyond their association with Back to the Future the Air Mags represent Nike's relentless pursuit of pushing boundaries and creating iconic footwear that transcends time."
 },
 {
-  "id": "2",
-  "title": "title2",
-"poster": "image 2",
-"link": "link 2",
-"release": "releas2",
-"brand":"brand2",
-"about": "about2"
+ "id": 2,
+ "title": "Nike Air Yeezy Red Octobers",
+"poster": "",
+"link": "https://stockx.com/air-yeezy-2-red-october",
+"release": "2014",
+"brand":"Nike",
+"about": "The Nike Air Yeezy 2 Red October is one of the most sought-after and legendary sneakers in the world of streetwear. Designed in collaboration with rapper Kanye West, the Red Octobers were released in 2014 and instantly became a cultural phenomenon. The shoe's all-red colorway, luxurious materials, and distinctive design made it an instant icon. The release of the Red Octobers was marked by secrecy, scarcity, and a high level of anticipation. After numerous rumors and delays, Nike unexpectedly dropped the sneakers online, and they sold out within minutes, creating a frenzy in the sneaker community. The Red Octobers encapsulate the influence of Kanye West and his impact on the fusion of fashion, music, and sneaker culture. The release of these limited edition sneakers solidified their place in history and cemented their status as a grail among sneaker enthusiasts."
 },
 {
-  "id": "3",
-  "title": "title3",
-"poster": "image 3",
-"link": "link 3",
-"release": "releas3",
-"brand":"brand3",
-"about": "about3"
+"id": 3,
+"title": "Air Jordan 11 Space Jam",
+"poster": "",
+"link": "https://stockx.com/jordan-11-retro-space-jams-2016",
+"release": "2009",
+"brand":"Jordan",
+"about": "The Air Jordan Space Jam is a legendary sneaker that holds a special place in both basketball and pop culture history. It was first introduced during the 1995 NBA playoffs, when Michael Jordan famously wore the shoe in the movie Space Jam, where he starred alongside animated characters from Looney Tunes. The Air Jordan Space Jam featured a black patent leather upper, a white midsole, and a translucent outsole, creating a sleek and iconic design. The shoe gained immense popularity not only due to its association with the beloved film but also because it represented Michael Jordan's dominance in the sport. Over the years, the Air Jordan Space Jam has seen various re-releases, becoming a favorite among sneaker enthusiasts and fans of the Air Jordan line. Its timeless design, rich history, and connection to a beloved film have solidified the Air Jordan Space Jam as an iconic and sought-after sneaker within the Air Jordan legacy."
 },
 {
-  "id": "4",
-  "title": "title4",
-"poster": "image 4",
-"link": "link 4",
-"release": "releas4",
-"brand":"brand4",
-"about": "about4"
+"id": 4,
+"title": "Air Jordan 1 Off-White Chicago",
+"poster": "",
+"link": "https://stockx.com/air-jordan-1-retro-high-off-white-chicago",
+"release": "2017",
+"brand":"Jordan",
+"about": "The Air Jordan 1 Off-White Chicago is a highly coveted and influential sneaker born out of the collaboration between Jordan brand and Virgil Abloh's fashion label, Off-White. Released in 2017 as part of The Ten collection, the Off-White Chicago brought together the iconic Air Jordan 1 silhouette with Virgil Abloh's distinct deconstructed and industrial design aesthetic. The shoe features a white, red, and black color scheme inspired by the classic Chicago Bulls team colors. Its unique design elements include exposed foam, stitched-on Swoosh logos, Off-White branding, and the signature red zip tie. The release of the Air Jordan 1 Off-White Chicago marked a significant moment in sneaker culture, blending the worlds of basketball, high fashion, and streetwear. The collaboration and subsequent popularity of the shoe propelled the Off-White brand to new heights while solidifying the Air Jordan 1's status as a timeless and sought-after sneaker silhouette."
 },
 {
-  "id": "5",
-  "title": "title5",
-"poster": "image 5",
-"link": "link 5",
+"id": 5,
+"title": "Nike Sb Dunk Low What The Dunk",
+"poster": "",
+"link": "https://stockx.com/nike-dunk-sb-low-what-the-dunk",
 "release": "releas5",
-"brand":"brand5",
-"about": "about5"
-}
+"brand":"Nike",
+"about": "The Nike SB Dunk Low What the Dunk is a celebrated sneaker that holds a special place in the history of Nike SB Dunks. Released in 2007, the What the Dunk concept aimed to pay homage to the diverse and vibrant culture of skateboarding. The shoe features a mismatched and eclectic design, blending various iconic colorways and materials from past SB Dunk releases. With its asymmetrical panels, unique combinations of colors, and playful details, the What the Dunk captures the essence of creativity and individuality in skateboarding. This release quickly became highly sought-after and remains highly coveted by sneaker collectors worldwide. The What the Dunk represents Nike's commitment to artistic expression and innovation, showcasing the brand's willingness to push boundaries and celebrate the rich heritage of their SB Dunk line."
+},
+{
+  "id": 6,
+  "title": "Air Jordan 5 Off-White Muslin",
+  "poster": "",
+  "link": "https://stockx.com/air-jordan-5-retro-off-white-black",
+  "release": "releas5",
+  "brand":"Jordan",
+  "about": "The SB Dunk High Supreme Orange is a highly sought-after and iconic sneaker that resulted from the collaboration between Nike SB and Supreme. Released in 2003, this shoe is a testament to the intersection of skateboarding and streetwear culture. The SB Dunk High Supreme Orange features a vibrant orange colorway with white accents and the iconic Supreme branding on the heel. This collaboration marked a significant moment in sneaker history, as it showcased the rising influence of streetwear brands and their impact on the sneaker industry. The release was met with immense hype and quickly became a grail for sneaker enthusiasts. The SB Dunk High Supreme Orange is a timeless and coveted piece, representing the fusion of skateboarding, fashion, and cultural movements."
+  },
+  {
+    "id": 7,
+    "title": "Nike Sb Dunk High Supreme Orange",
+    "poster": "",
+    "link": "https://stockx.com/nike-sb-dunk-high-supreme-orange",
+    "release": "2001",
+    "brand":"Nike",
+    "about": "The SB Dunk High Supreme Orange is a highly sought-after and iconic sneaker that resulted from the collaboration between Nike SB and Supreme. Released in 2003, this shoe is a testament to the intersection of skateboarding and streetwear culture. The SB Dunk High Supreme Orange features a vibrant orange colorway with white accents and the iconic Supreme branding on the heel. This collaboration marked a significant moment in sneaker history, as it showcased the rising influence of streetwear brands and their impact on the sneaker industry. The release was met with immense hype and quickly became a grail for sneaker enthusiasts. The SB Dunk High Supreme Orange is a timeless and coveted piece, representing the fusion of skateboarding, fashion, and cultural movements."
+    },
+    {
+      "id": 8,
+      "title": "Yeezy Foam RNR Mineral Blue",
+      "poster": "",
+      "link": "https://stockx.com/adidas-yeezy-foam-rnnr-mineral-bluet",
+      "release": "2021",
+      "brand":"Adidas",
+      "about": "The Yeezy Foam RNNR is a unique and highly sought-after sneaker model that is part of the Yeezy line by Kanye West in collaboration with Adidas. The Foam RNNR, short for Foam Runner, offers a bold and futuristic design, featuring a one-piece molded construction made from a proprietary foam compound. The shoe has a distinct slip-on style with a sleek silhouette and intricate geometric patterns. The Yeezy Foam RNNR represents Kanye West's innovative approach to footwear, pushing the boundaries of traditional sneaker design. Upon its release in 2020, the Foam RNNR quickly gained attention and acclaim for its distinctive aesthetics and comfort. Its unconventional design and limited availability have contributed to its desirability, making it a sought-after sneaker among sneaker enthusiasts and Yeezy fans. The Yeezy Foam RNNR stands as a testament to Kanye West's vision and his ability to disrupt the sneaker market with unconventional and forward-thinking designs."
+      },
+    {
+      "id": 9,
+      "title":"Air Jordan 1 University Blue",
+      "poster":"",
+      "link":"https://stockx.com/air-jordan-1-retro-high-white-university-blue-black",
+      "release":"2021",
+      "brand":"Jordan",
+      "about":"The Jordan 1 Retro High White University Blue Black is a captivating sneaker that combines classic design elements with a fresh color scheme. As part of the iconic Air Jordan line, the Retro High model pays homage to the original Air Jordan 1 silhouette released in 1985. This particular colorway, featuring a white leather base, university blue overlays, and black accents, offers a clean and sophisticated look. The color combination exudes a sense of elegance and versatility, making it a popular choice for both casual wear and more formal settings. The Jordan 1 Retro High White University Blue Black showcases the enduring appeal of the Air Jordan 1 and its ability to evolve while retaining its timeless charm. With its rich history and continued popularity, this sneaker represents the legacy of Michael Jordan and the ongoing legacy of the Air Jordan line within the sneaker and basketball communities."
+    },
+    {
+      "id": 10,
+      "title":"Yeezy Boost 350",
+      "poster":"",
+      "link":"https://stockx.com/adidas-yeezy-boost-350-turtle-dove-2022",
+      "release":"2022",
+      "brand":"Adidas",
+      "about":"The Yeezy Boost 350 is a highly popular sneaker line created through the collaboration between Adidas and Kanye West. The Yeezy Boost 350 was first introduced in 2015 and quickly became a cultural phenomenon, known for its comfortable Boost cushioning and minimalist design. The Turtledove colorway, one of the original releases, features a blend of light gray and cream tones, creating a distinctive and versatile look. The Yeezy Boost 350 line played a significant role in shaping the sneaker market, combining Kanye West's creative vision with Adidas' expertise in footwear technology. While specific releases and colorways may vary, the Yeezy Boost 350 Turtledove remains an iconic and sought-after sneaker, representing the ongoing collaboration and impact of Kanye West and Adidas. Please note that any information about releases after my knowledge cutoff date of September 2021 may not be accurately reflected in my response, so it's best to check official sources or reputable sneaker news platforms for the most up-to-date information."
+    },
+    {
+      "id": 11,
+      "title":"Nike Sb Dunk Low Para",
+      "poster":"",
+      "link":"https://stockx.com/nike-sb-dunk-low-parra-2021",
+      "release":"2021",
+      "brand":"Nike",
+      "about":"The Nike SB Dunk Low Pro is a highly revered and influential skateboarding sneaker that has left a lasting impact on the world of skateboarding and sneaker culture. Introduced in 2002 as a skateboarding version of the iconic Nike Dunk, the SB Dunk Low Pro was designed specifically to meet the needs of skateboarders, offering enhanced durability, improved cushioning, and excellent board feel. The shoe quickly gained popularity among skaters worldwide due to its performance-driven features and stylish aesthetics. Over the years, the Nike SB Dunk Low Pro has seen various collaborations and colorways, making it a favorite canvas for creative expression. Its versatility and ability to seamlessly transition from the skatepark to streetwear fashion have contributed to its enduring popularity. The SB Dunk Low Pro has become a symbol of skateboarding culture and an iconic silhouette that continues to captivate both skateboarders and sneaker enthusiasts alike."
+    },
+    {
+      "id": 12,
+      "title":"Adidas Yeezy Boost 700",
+      "poster":"",
+      "link":"https://stockx.com/adidas-yeezy-wave-runner-700-solid-grey",
+      "release":"2017",
+      "brand":"Adidas",
+      "about":"The Adidas Wave Runner is a notable sneaker that belongs to the Yeezy line, a collaboration between Adidas and Kanye West. Released in 2017, the Wave Runner, also known as the Yeezy Boost 700, brought a unique design aesthetic to the sneaker world. The shoe features a chunky silhouette with a mix of suede, leather, and mesh materials. Its color palette combines various shades of gray, blue, and orange, creating a distinct and eye-catching look. The Adidas Wave Runner quickly gained popularity due to its bold and unconventional design, contributing to the growing trend of chunky sneakers. The shoe's design stands out as a departure from traditional athletic footwear, incorporating a fashion-forward approach. With its striking appearance and association with the Yeezy brand, the Adidas Wave Runner has become a sought-after sneaker, solidifying its place in sneaker culture history."
+    },
+    {
+      "id": 13,
+      "title":"Jordan 11 Concord",
+      "poster":"",
+      "link":"https://stockx.com/air-jordan-11-retro-concord-2018",
+      "release":"2018",
+      "brand":"Jordan",
+      "about":"The Jordan Concord is an iconic sneaker that holds a significant place in the history of the Air Jordan line. First released in 1995, the Jordan Concord is part of the Air Jordan 11 collection, designed by legendary sneaker designer Tinker Hatfield. The shoe features a clean and timeless design, with a white upper made of patent leather and mesh, coupled with black accents. The most distinctive element of the Concord is the icy blue translucent outsole. The Jordan Concord gained immense popularity not only for its striking appearance but also for its technological advancements. It introduced features like carbon fiber support, a full-length Air unit, and a sleek silhouette. This combination of style and performance propelled the Jordan Concord to become one of the most coveted sneakers in sneaker culture. With its rich history and association with Michael Jordan's dominance on the court, the Jordan Concord remains a symbol of excellence and a timeless classic in the Air Jordan lineup."
+    },
+    {
+      "id": 14,
+      "title":"Nike Sb Dunk Ebay Sandy Bodecker",
+      "poster":"",
+      "link":"https://stockx.com/nike-sb-dunk-low-ebay-sandy-boedecker",
+      "release":"2022",
+      "brand":"Nike",
+      "about":"Nike SB Dunk Low Sandy Bodecker is a special edition sneaker that pays tribute to Sandy Bodecker, a highly influential figure in the history of Nike SB. As the former VP of Special Projects and Nike SB's general manager, Bodecker played a pivotal role in revitalizing the Nike SB line in the early 2000s. This unique Dunk Low release features a premium construction with a combination of materials, including suede and leather. The colorway chosen for the shoe reflects Bodecker's personal style and love for earth tones, incorporating a mix of earthy hues and a subtle yet refined design. The Nike SB Dunk Low Sandy Bodecker edition serves as a testament to Bodecker's contributions in shaping the Nike SB division and his impact on the skateboarding community. This commemorative release showcases the intersection of skateboarding, design, and the visionary leadership that Bodecker brought to Nike SB during its formative years."
+    },
+    {
+      "id": 15,
+      "title":"Air Jordan 4 Thunder",
+      "poster":"",
+      "link":"https://stockx.com/air-jordan-4-retro-thunder-2023",
+      "release":"2023",
+      "brand":"Jordan",
+      "about":"The Jordan 4 Thunder is a highly coveted sneaker that holds a special place in the history of the Air Jordan line. Originally released in 2006, the Jordan 4 Thunder quickly became a fan-favorite due to its bold and striking design. The shoe features a predominantly black upper constructed with nubuck leather, complemented by vibrant yellow accents on the eyelets, heel tab, and outsole. The contrasting colorway, reminiscent of thunder and lightning, adds a dynamic and energetic touch to the iconic Jordan 4 silhouette. The Thunder colorway was inspired by Michael Jordan's aggressive playing style and his ability to strike with unmatched power on the basketball court. With its eye-catching aesthetics and historical significance within the Air Jordan lineage, the Jordan 4 Thunder remains highly sought-after by sneaker enthusiasts and collectors. Its enduring popularity solidifies its status as a true classic in the world of sneakers."
+    },
+    {
+      "id": 16,
+      "title":"Nike Kobe 6 Grinch",
+      "poster":"",
+      "link":"https://stockx.com/nike-kobe-6-protro-grinch",
+      "release":"2020",
+      "brand":"Nike",
+      "about":"The Nike Kobe 6 Protro Grinch is a highly anticipated and celebrated sneaker that made its return in 2020. Originally released in 2010, the Grinch colorway became an instant classic due to its vibrant and eye-catching design. The shoe pays homage to the iconic Dr. Seuss character, the Grinch, with its bold and striking combination of green, black, and red. The Kobe 6 Protro Grinch features updated performance technology, enhancing its on-court capabilities while retaining the beloved design elements of the original. The release of the Grinch colorway garnered significant attention from sneaker enthusiasts and Kobe Bryant fans alike, as it not only honors Bryant's illustrious career but also represents the relentless and competitive spirit he embodied. The Nike Kobe 6 Protro Grinch is a fitting tribute to one of the most legendary basketball players and showcases the enduring impact of Kobe Bryant's legacy on and off the court."
+    }
 ]
