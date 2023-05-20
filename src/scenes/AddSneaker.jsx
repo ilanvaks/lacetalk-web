@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Form, Button,  } from "react-bootstrap";
+import { Form, Row, } from "react-bootstrap";
 import "../styles/AddSneaker.css";
 
 export default function AddSneaker({ setSneakers }) {
@@ -97,14 +97,19 @@ export default function AddSneaker({ setSneakers }) {
         </Form.Group>
         <br />
 
-        <Form.Select aria-label="Default select example">
+        <Form.Group>
+        <Form.Label>Brand</Form.Label>
+        <Form.Select 
+        aria-label="Default select example"
+        className="form-selecerter"
+        onChange={(e) => setBrand(e.target.value)}>
           <Form.Label>Brand</Form.Label>
           <option>Choose Brand!</option>
-          <option value="1">Nike</option>
-          <option value="2">Jordan</option>
-          <option value="3">Adidas</option>
-          onChange={(e) => setBrand(e.target.value)}
+          <option value="Nike">Nike</option>
+          <option value="Jordan">Jordan</option>
+          <option value="Adidas">Adidas</option>
         </Form.Select>
+        </Form.Group>
 
         <Form.Group>
           <Form.Label>About</Form.Label>
@@ -115,15 +120,16 @@ export default function AddSneaker({ setSneakers }) {
           />
         </Form.Group>
         <br />
-
-        <Button
+        <div className="container">
+        <button 
           className="kickit-button"
           variant="primary"
           type="submit"
           onClick={handleAddKicks}
         >
-          Kick It!
-        </Button>
+        <span>Kick It!</span>  
+        </button>
+        </div>
       </Form>
     </div>
   );

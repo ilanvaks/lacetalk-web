@@ -91,6 +91,7 @@ import "../styles/Home.css";
               sneakerId={selectedSneaker._id}
               sneakers={sneakers}
               setSneakers={setSneakers}
+              setShowModal={setShowModal}
               />
             <UpdateSneakers
               sneakerId={selectedSneaker._id}

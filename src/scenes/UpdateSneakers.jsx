@@ -13,6 +13,7 @@ export default function UpdateSneakers({
   currentRelease,
   currentBrand,
   currentAbout,
+  setShowModal,
 }) {
   const [selectedSneaker, setSelectedSneaker] = useState(false);
   const [title, setTitle] = useState("");

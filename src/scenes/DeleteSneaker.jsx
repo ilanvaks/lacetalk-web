@@ -5,9 +5,8 @@ import { Button, Toast } from "react-bootstrap";
 import { Trash } from "react-bootstrap-icons";
 import "../../src/styles/DeleteSneaker.css";
 
-export default function DeleteSneaker({ sneakerId, setSneakers }) {
+export default function DeleteSneaker({ sneakerId, setSneakers, showModal, setShowModal }) {
   const navigate = useNavigate();
-  const [show, setShow] = useState(false);
 
   const handleDelete = (e) => {
     e.preventDefault();
@@ -21,6 +20,7 @@ export default function DeleteSneaker({ sneakerId, setSneakers }) {
       .then((resp) => resp.json())
       .then((data) => {
         setSneakers(data);
+        setShowModal(false)
         toast.success("Sneaker has been deleted")
       })
       .catch((error) => {
