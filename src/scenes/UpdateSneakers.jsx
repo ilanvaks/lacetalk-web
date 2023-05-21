@@ -79,9 +79,12 @@ export default function UpdateSneakers({
         setBrand("");
         setAbout("");
         setShow(false);
+        setShowModal(false)
+        toast.success("Sneaker Updated!")
         // resetFormFields()
       })
       .catch(alert);
+      
   };
 
   return (
@@ -90,7 +93,7 @@ export default function UpdateSneakers({
                   <span class="button__text">Edit Shoe</span>
                   <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
                 </button>
-      <Modal show={show} onHide={handleClose} size="l">
+      <Modal show={show} onHide={handleClose} className="d-flex align-items-center" size="lg">
       <div className="whole-form-card">
           <Modal.Header>
             <h2 className="singup">EDIT</h2>

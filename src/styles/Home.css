@@ -12,7 +12,8 @@
 
 .modal-header{
 justify-content: center !important;
-/* border: 1px solid black !important; */
+border-bottom: 1px solid black !important;
+margin-top: auto;
 }
 
 .modal-content {
@@ -79,6 +80,9 @@ justify-content: center !important;
   box-sizing: border-box;
 }
 
+.modal-text1{
+  border-bottom: black solid 1px;
+}
 
 .button-effect .sneakers-picture{
   display: block;
@@ -100,4 +104,3 @@ justify-content: center !important;
       filter: none;
   }
 }
-

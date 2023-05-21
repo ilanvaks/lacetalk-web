@@ -76,39 +76,48 @@ import "../styles/Home.css";
         className="modal show"
         style={{ display: 'block', position: 'initial' }}>
         <Modal
-          className="Kick-Modal"
+          className="Kick-Modal d-flex align-items-center"
           show={showModal}
           onHide={handleModalClose}
           size="lg"
         >
-          <Modal.Header closeButton={handleModalClose}></Modal.Header>
           <Modal.Body className="modal-body1">
               <div key={selectedSneaker._id}>
               <Image
                 fluid
                 style={{width:"80%"}}
-                className="sneakers-picture-modal"
+                className="sneakers-picture-modal d-flex justify-content-center"
                 src={selectedSneaker.poster}
                 alt=""
                 />
-                <h2>Name: {selectedSneaker.title}</h2>
-              <a href={selectedSneaker.link}>{selectedSneaker.link}</a>
-              <h2>Release: {selectedSneaker.release}</h2>
-              <h3>Brand: {selectedSneaker.brand}</h3>
+                <h2 className="modal-text1">Name: {selectedSneaker.title}</h2>
+              <h2 className="modal-text1">Release: {selectedSneaker.release}</h2>
+              <h2 className="modal-text1">Brand: {selectedSneaker.brand}</h2>
+              <a className="modal-text1" href={selectedSneaker.link}>{selectedSneaker.link}</a>
               <p>About: {selectedSneaker.about}</p>
             </div>
-            <Modal.Footer>
+            <Modal.Footer className="d-flex justify-content-between">
+              <div className="del-edit-btn d-flex">
+                <div className="update1-btn me-3">
+              <UpdateSneakers
+              sneakerId={selectedSneaker._id}
+              sneakers={sneakers}
+              setSneakers={setSneakers}
+              setShowModal={setShowModal}
+              />
+              </div>
+              <div className="delete1-btn">
             <DeleteSneaker
               sneakerId={selectedSneaker._id}
               sneakers={sneakers}
               setSneakers={setSneakers}
               setShowModal={setShowModal}
               />
-            <UpdateSneakers
-              sneakerId={selectedSneaker._id}
-              sneakers={sneakers}
-              setSneakers={setSneakers}
-              />
+              </div>
+            </div>
+              <div className="close-modal-btn">
+              <Button onClick={handleModalClose}>Close</Button>
+              </div>
             </Modal.Footer>
             </Modal.Body>
         </Modal>

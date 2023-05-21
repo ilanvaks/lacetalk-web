@@ -12,12 +12,12 @@
   border: 1px solid blue;
   background-color: blue
 }
-
+/* 
 element.style {
     display: block;
     padding-left: 0px;
     background-color: black;
-}
+} */
 
 
 .edit-btn, .button__icon, .button__text {
@@ -141,17 +141,16 @@ button svg {
 }
 
 .whole-form-card {
-  display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 350px;
+  /* min-height: 350px; */
   /* width: 300px; */
   flex-direction: column;
-  gap: 10px;
-  border-radius: 15px;
+  /* gap: 10px !important; */
+  border-radius: 15px !important;
   background-color: white;
-  box-shadow: 16px 16px 32px #c8c8c8,
-        -16px -16px 32px #fefefe;
+  box-shadow: 16px 16px 32px rgba(0, 206, 209, 0.748),
+        -16px -16px 32px rgba(0, 206, 209, 0.744);
   border-radius: 8px;
 }
 
