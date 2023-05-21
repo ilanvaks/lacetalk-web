@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
-import { GoThumbsup, GoThumbsdown } from 'react-icons/go'
+import { IoMdThumbsUp as ThumbsUp, IoMdThumbsDown as ThumbsDown } from 'react-icons/io'
 import "../styles/UpdateVote.css"
 
 export default function UpdateVote({ sneakerId, sneaker, setSneakers }) {
@@ -59,12 +59,12 @@ export default function UpdateVote({ sneakerId, sneaker, setSneakers }) {
 
   return (
     <div>
-      <Button className="voteButton" onClick={voteUp}>
-        <GoThumbsup /> {sneaker.thumbsUp}
-      </Button>
-      <Button className="voteDownButton" onClick={voteDown}>
-        <GoThumbsdown /> {sneaker.thumbsDown}
-      </Button>
+      <button className="voteButton" onClick={voteUp}>
+        <ThumbsUp /> {sneaker.thumbsUp}
+      </button>
+      <button className="voteDownButton" onClick={voteDown}>
+        <ThumbsDown /> {sneaker.thumbsDown}
+      </button>
     </div>
   );
 }

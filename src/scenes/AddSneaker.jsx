@@ -95,7 +95,6 @@ export default function AddSneaker({ setSneakers }) {
             onChange={(e) => setRelease(e.target.value)}
           />
         </Form.Group>
-        <br />
 
         <Form.Group>
         <Form.Label>Brand</Form.Label>

@@ -1,0 +1,9 @@
+.three-thing-card {
+  min-width: 400px; /* Adjust this to your preferred minimum width */
+  min-height: 400px; /* Adjust this to your preferred minimum height */
+  border-radius: 30px;
+  background: white;
+  box-shadow: 15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
+  padding: 20px; /* Add padding */
+}

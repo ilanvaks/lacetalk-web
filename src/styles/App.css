@@ -13,12 +13,24 @@
 
 
 
-
+/* -------Vote--------- */
 
 .voteDownButton{
   background-color: transparent;
-  color: grey;
+  color: gray;
   border: none;
+  padding: 10px 20px; /* Adjust these values as needed */
+  font-size: 1.2em; /* Adjust as needed */
+  transform: scale(1.2)
+}
+
+.voteButton {
+  background-color: transparent;
+  color: gray;
+  border: none;
+  padding: 10px 20px; /* Adjust these values as needed */
+  font-size: 1.2em; /* Adjust as needed */
+  transform: scale(1.2)
 }
 
 

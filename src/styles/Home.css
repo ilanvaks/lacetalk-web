@@ -1,6 +1,18 @@
 
 .modal-body1{
-  background-color: black
+  background-color: #ffffff;
+    /* width: 200%; */
+}
+
+.modal-title {
+  margin-bottom: 0;
+  margin: 0 28%;
+  text-align: center !important;
+}
+
+.modal-header{
+justify-content: center !important;
+/* border: 1px solid black !important; */
 }
 
 .modal-content {
@@ -39,9 +51,11 @@
 } */
 
 .sneakers-picture-modal {
-  width: 100%;
+  /* width: 100%; */
   max-width: 100%;
   height: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .Delete-button {
@@ -55,9 +69,11 @@
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: brightness(100px);  
   -webkit-backdrop-filter: brightness(100px);  
-  backdrop-filter: blur(3px);  
+  backdrop-filter: blur(7px);  
   -webkit-backdrop-filter: blur(3px);
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5)
 }
+
 
 * {
   box-sizing: border-box;

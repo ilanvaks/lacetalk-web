@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col, Modal, Button, Image } from "react-bootstrap";
 import { Card } from "react-bootstrap";
 import Header from "../components/Header/Header";
+import ThreeThings from "../components/ThreeThings";
 import DeleteSneaker from "./DeleteSneaker";
 import UpdateSneakers from "./UpdateSneakers.jsx";
 import UpdateVote from "./UpdateVote.jsx"
 import Spinner from "react-bootstrap/Spinner";
 import Footer from "../components/Footer/Footer";
-
 import "../styles/Home.css";
+
 
 // export default function Home({ sneakers, setSneakers }) {
   export default function Home() {
@@ -32,6 +33,10 @@ import "../styles/Home.css";
   return (
     <>
     <Header />
+    <ThreeThings/>
+    <br />
+    <br />
+    <br/>
       <div className="main-container">
         {!sneakers 
         ? <Spinner animation="border" variant="warning" />
@@ -67,26 +72,32 @@ import "../styles/Home.css";
       </div>
 
       {selectedSneaker && (
+        <div
+        className="modal show"
+        style={{ display: 'block', position: 'initial' }}>
         <Modal
           className="Kick-Modal"
           show={showModal}
           onHide={handleModalClose}
+          size="lg"
         >
+          <Modal.Header closeButton={handleModalClose}></Modal.Header>
           <Modal.Body className="modal-body1">
               <div key={selectedSneaker._id}>
               <Image
                 fluid
+                style={{width:"80%"}}
                 className="sneakers-picture-modal"
                 src={selectedSneaker.poster}
                 alt=""
                 />
-                <h2>Name:{selectedSneaker.title}</h2>
-              <h2>Link:{selectedSneaker.link}</h2>
-              <p>Release:{selectedSneaker.release}</p>
-              <p>Brand:{selectedSneaker.brand}</p>
-              <p>About:{selectedSneaker.about}</p>
+                <h2>Name: {selectedSneaker.title}</h2>
+              <a href={selectedSneaker.link}>{selectedSneaker.link}</a>
+              <h2>Release: {selectedSneaker.release}</h2>
+              <h3>Brand: {selectedSneaker.brand}</h3>
+              <p>About: {selectedSneaker.about}</p>
             </div>
-          
+            <Modal.Footer>
             <DeleteSneaker
               sneakerId={selectedSneaker._id}
               sneakers={sneakers}
@@ -98,12 +109,10 @@ import "../styles/Home.css";
               sneakers={sneakers}
               setSneakers={setSneakers}
               />
-            <Button variant="secondary" onClick={handleModalClose}>
-              Close
-            </Button>
+            </Modal.Footer>
             </Modal.Body>
-          
         </Modal>
+        </div>
       )}
       <Footer/>
     </>

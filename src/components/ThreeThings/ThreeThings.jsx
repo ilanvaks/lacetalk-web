@@ -1,42 +1,48 @@
-import { Container, Row, Col } from "../../utilis/Bootstrap.jsx";
-import useBgRand from "../../hook/useBgRand";
+import { Container,Row,Col } from "react-bootstrap"
+import "../../styles/ThreeThings.css"
 
 export default function ThreeThings() {
-  const { handleBgImage } = useBgRand();
 
   return (
+    <div class="three-thing-card">
+    
     <section>
       <Container fluid id="three-things" className="p-5">
-        <Row>
-          <Col><h2 className="text-center">Three Things 
-          <span>That bring pride to my mom.</span></h2></Col>
+
+      <div style={{ marginTop: '-10px', fontSize: '1.5em' }}>
+      <Row>
+          <Col><h2 className="text-center">The Sneaker Chronicles:
+          </h2>
+          </Col>
         </Row>
+        </div>
         
         <Row className="justify-content-center g-5">
-          <Col sm={8} lg={3}>
-            <p className="icon">🤗</p>
-            <h3 className="text-center">Collaborative <span className="d-md-block">Catalyst</span></h3>
-            <p className="text-center text-md-start">I am a team oriented player who brings professional expertise, positive attitude, and humor to keep our team energized, motivated, while delivering results.</p>
+        <Col sm={8} lg={4}>  
+            <p className="icon"></p>
+            <h3 className="text-center"><span className="d-md-block">Reselling</span></h3>
+            <p className="text-center text-md-start">The sneaker reselling market is a significant part of the sneaker community. Limited edition sneakers can increase in value over time, making them sought-after investments.</p>
           </Col>
 
-          <Col sm={8} lg={3}>
-            <p className="icon"><a href="https://system-overload-solution.web.app/" 
+          <Col sm={8} lg={4}>  
+            <p className="icon"
               target="_blank" 
-              rel="noreferrer" 
-              className="easter-egg">🚀</a></p>
-            <h3 className="text-center">Rocket to<span className="d-md-block">The Moon</span></h3>
-            <p className="text-center text-md-start">With 20+ years in tech, I have found that motivating our team to excel is like launching a rocket ship - challenging, but incredibly rewarding!</p>
+              rel="noreferrer"></p>
+            <h3 className="text-center"><span className="d-md-block">Releases</span></h3>
+            <p className="text-center text-md-start">Sneaker enthusiasts pay close attention to sneaker releases. This can include eagerly awaiting the release of new models, or special limited editions, and even lining up for hours or days to get the latest pair.</p>
           </Col>
 
-          <Col sm={8} lg={3}>            
+          <Col sm={8} lg={4}>             
             <p className="icon easter-egg-2" 
-              onClick={ handleBgImage}>🥪</p>
-            <h3 className="text-center">Functionality <span className="d-md-block">+ Design</span></h3>
-            <p className="text-center text-md-start">Combining tech and design is my jam - like PB&J. I strive to create a seamless, irresistible experience for users whilst keeping things toasty and fresh.</p>
+              ></p>
+            <h3 className="text-center"><span className="d-md-block">Culture</span></h3>
+            <p className="text-center text-md-start">Sneaker culture is an important aspect of the community. It includes not just the sneakers themselves, but the history, the designs, the stories behind the sneakers, and how they became popular.</p>
           </Col>
 
         </Row>
       </Container>
     </section>
+    </div>
+    
   )
 }
