@@ -16,7 +16,7 @@ export default function Header() {
           </Col>
 
           <Col sm={11} md={6}>
-             <h1 className="text-black starter-header text-center text-lg-start"><span>Welcome to </span> LaceTalk</h1>
+             <h1 className="header-title text-black starter-header text-center text-lg-start"><span>Welcome to </span > LaceTalk</h1>
               <p className="info-header text-black">The place where sneaker collectors from all over the world can come together and collectively share info.</p>
               <HashLink 
                 to="/#collection" 

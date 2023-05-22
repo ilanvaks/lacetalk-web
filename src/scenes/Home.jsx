@@ -8,6 +8,7 @@ import UpdateSneakers from "./UpdateSneakers.jsx";
 import UpdateVote from "./UpdateVote.jsx"
 import Spinner from "react-bootstrap/Spinner";
 import Footer from "../components/Footer/Footer";
+import { FaYoutube } from "react-icons/fa";
 import "../styles/Home.css";
 
 
@@ -59,7 +60,7 @@ import "../styles/Home.css";
                         alt=""
                         onClick={() => handleModalShow(element)}
                         />
-                        <h3 className="mt-3">{element.title}</h3>
+                        <h3 className="card-title mt-3">{element.title}</h3>
                     </div>
 
                     <UpdateVote sneakerId={element._id} sneaker={element} setSneakers={setSneakers} />
@@ -79,7 +80,7 @@ import "../styles/Home.css";
           className="Kick-Modal d-flex align-items-center"
           show={showModal}
           onHide={handleModalClose}
-          size="lg"
+          size="md"
         >
           <Modal.Body className="modal-body1">
               <div key={selectedSneaker._id}>
@@ -95,6 +96,18 @@ import "../styles/Home.css";
               <h2 className="modal-text1">Brand: {selectedSneaker.brand}</h2>
               <a className="modal-text1" href={selectedSneaker.link}>{selectedSneaker.link}</a>
               <p>About: {selectedSneaker.about}</p>
+              {selectedSneaker.youtubeLink && (
+            <div>
+              <a
+                className="modal-text1"
+                href={selectedSneaker.youtubeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaYoutube size={45} className="youtube-icon"/>
+              </a>
+            </div>
+          )}
             </div>
             <Modal.Footer className="d-flex justify-content-between">
               <div className="del-edit-btn d-flex">
@@ -123,7 +136,6 @@ import "../styles/Home.css";
         </Modal>
         </div>
       )}
-      <Footer/>
     </>
   );
 }

@@ -10,6 +10,7 @@ import Login from './scenes/Login';
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import SignUpForm from './scenes/SignUpForm';
+import Footer from './components/Footer/Footer';
 import "bootstrap/dist/css/bootstrap.min.css"
 import './styles/App.css';
 
@@ -65,6 +66,7 @@ function App() {
       <Route path='*' element={<Home sneakers={sneakers} setSneakers={setSneakers}/>} />
     </Routes>
    </BrowserRouter>
+   <Footer/>
    </>
   );
 }

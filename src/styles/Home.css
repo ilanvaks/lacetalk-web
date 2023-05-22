@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+.card-title{
+  font-family: 'Carter One', cursive;
+}
+
 
 .modal-body1{
   background-color: #ffffff;
@@ -28,6 +34,12 @@ margin-top: auto;
 
 .modal-open {
   display: flex;
+}
+
+.youtube-icon {
+  font-size: 24px !important;
+  color: red !important;
+  text-decoration: none !important;
 }
 
 .whole-form {

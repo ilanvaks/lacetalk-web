@@ -56,7 +56,7 @@ export default function Login({ user, setUser, setInUser }) {
 
 
   return (
-    <Form>
+    <Form className="d-flex align-items-center">
       <div className="login-box">
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>

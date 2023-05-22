@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,200&display=swap');
+
+.title-threethings{
+  font-family: 'Bungee Shade', cursive;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.simple-three{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.three-title{
+  font-family: 'Carter One', cursive;
+  font-size: 35px;
+}
+
 .three-thing-card {
   min-width: 400px; /* Adjust this to your preferred minimum width */
   min-height: 400px; /* Adjust this to your preferred minimum height */
