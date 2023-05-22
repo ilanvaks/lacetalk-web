@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Form, Row } from "react-bootstrap";
+import { toast } from "react-toastify"
 import "../styles/AddSneaker.css";
 
 export default function AddSneaker({ setSneakers }) {
@@ -32,7 +33,6 @@ export default function AddSneaker({ setSneakers }) {
       .then((resp) => resp.json())
       .then((data) => {
         if (data.message) {
-          alert(data.message);
           setSneakers(data);
           setTitle("");
           setPoster();
@@ -41,6 +41,7 @@ export default function AddSneaker({ setSneakers }) {
           setBrand("");
           setAbout("");
           setYoutubeLink("");
+          toast.success("Sneaker has been added!")
           return;
         }
         // resetFormFields()
@@ -72,7 +73,7 @@ export default function AddSneaker({ setSneakers }) {
       <Form onSubmit={handleAddKicks}>
         <Form.Group>
           <Form.Label>Title</Form.Label>
-          <Form.Control
+          <Form.Control className="type-file"
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -81,7 +82,7 @@ export default function AddSneaker({ setSneakers }) {
 
         <Form.Group>
           <Form.Label>Poster</Form.Label>
-          <Form.Control
+          <Form.Control className="type-file"
             type="file"
             // value={poster}
             onChange={(e) => convertFile(e.target.files)}
@@ -90,7 +91,7 @@ export default function AddSneaker({ setSneakers }) {
 
         <Form.Group>
           <Form.Label>Link</Form.Label>
-          <Form.Control
+          <Form.Control className="type-file"
             type="text"
             value={link}
             onChange={(e) => setLink(e.target.value)}
@@ -99,7 +100,7 @@ export default function AddSneaker({ setSneakers }) {
 
         <Form.Group>
           <Form.Label>Release</Form.Label>
-          <Form.Control
+          <Form.Control className="type-file"
             type="text"
             value={release}
             onChange={(e) => setRelease(e.target.value)}
@@ -108,9 +109,9 @@ export default function AddSneaker({ setSneakers }) {
 
         <Form.Group>
           <Form.Label>Brand</Form.Label>
-          <Form.Select
+          <Form.Select 
             aria-label="Default select example"
-            className="form-selecerter"
+            className="type-file"
             onChange={(e) => setBrand(e.target.value)}
           >
             <Form.Label>Brand</Form.Label>
@@ -123,7 +124,7 @@ export default function AddSneaker({ setSneakers }) {
 
         <Form.Group>
           <Form.Label>About</Form.Label>
-          <Form.Control
+          <Form.Control className="type-file"
             type="text"
             value={about}
             onChange={(e) => setAbout(e.target.value)}
@@ -131,7 +132,7 @@ export default function AddSneaker({ setSneakers }) {
         </Form.Group>
         <Form.Group>
           <Form.Label>YouTube(Optional)</Form.Label>
-          <Form.Control
+          <Form.Control className="type-file"
             type="text"
             value={youtubeLink}
             onChange={(e) => setYoutubeLink(e.target.value)}

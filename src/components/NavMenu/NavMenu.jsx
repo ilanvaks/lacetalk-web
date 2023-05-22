@@ -34,7 +34,7 @@ export default function NavMenu({ user, setUser }) {
     <Navbar className="custom-navbar" variant="dark" expand="lg">
       <Container fluid>
         
-        <Navbar.Brand className="brand-container"  as={Link} to="/">Home</Navbar.Brand>
+        <Navbar.Brand className="brand-container"  as={Link} to="/">LaceTalk</Navbar.Brand>
         
         <div className="right-container">
         <Nav className="mr-auto">

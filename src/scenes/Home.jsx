@@ -109,8 +109,8 @@ import "../styles/Home.css";
             </div>
           )}
             </div>
-            <Modal.Footer className="d-flex justify-content-between">
-              <div className="del-edit-btn d-flex">
+            <Modal.Footer className="d-flex">
+              <div className="del-edit-btn">
                 <div className="update1-btn me-3">
               <UpdateSneakers
               sneakerId={selectedSneaker._id}
@@ -128,9 +128,6 @@ import "../styles/Home.css";
               />
               </div>
             </div>
-              <div className="close-modal-btn">
-              <Button onClick={handleModalClose}>Close</Button>
-              </div>
             </Modal.Footer>
             </Modal.Body>
         </Modal>

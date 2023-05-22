@@ -4,50 +4,54 @@
 
 .edit-btn {
   position: relative;
-  width: 150px;
+  width: 155px;
   height: 50px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  border: 1px solid blue;
-  background-color: blue
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  border-right: 1px solid black !important;
+  transform: scale(.9);  
 }
-/* 
-element.style {
-    display: block;
-    padding-left: 0px;
-    background-color: black;
-} */
+
 
 
 .edit-btn, .button__icon, .button__text {
   transition: all 0.3s;
+  /* border-right: none !important; */
 }
 
 .edit-btn .button__text {
   transform: translateX(30px);
-  color: #fff;
+  color: blue;
   font-weight: 600;
 }
 
 .edit-btn .button__icon {
   position: absolute;
   transform: translateX(109px);
-  height: 100%;
+  height: 40px;
   width: 39px;
-  background-color: blue;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-left: 1px solid black;
+  border-right: 1px solid black !important;
+  /* border-right: 1px solid black; */
+  /* border: 1px solid black; */
 }
 
 .edit-btn .svg {
   width: 30px;
-  stroke: #fff;
+  stroke: blue;
 }
 
 .edit-btn:hover {
-  background: blue;
+  background: white;
+  /* border-right: none !important; */
 }
 
 .edit-btn:hover .button__text {
@@ -57,10 +61,13 @@ element.style {
 .edit-btn:hover .button__icon {
   width: 148px;
   transform: translateX(0);
+  /* border-right: none !important; */
+  /* border-right: 1px solid black; */
 }
 
 .edit-btn:active .button__icon {
   background-color: #2e8644;
+  /* border: 1px solid black; */
 }
 
 .edit-btn:active {

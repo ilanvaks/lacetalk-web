@@ -1,14 +1,15 @@
 .trash-btn {
- width: 150px;
+ width: 160px;
  height: 50px;
  cursor: pointer;
  display: flex;
  align-items: center;
- background: red;
- border: none;
+ background: white;
  border-radius: 5px;
  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
- background: #e62222;
+ background: white;
+ border: 1px solid black;
+ transform: scale(.9);  
 }
 
 .trash-btn, .trash-btn span {
@@ -17,7 +18,7 @@
 
 .trash-btn .text {
  transform: translateX(35px);
- color: white;
+ color: gray;
  font-weight: bold;
 }
 
@@ -34,11 +35,11 @@
 
 .trash-btn svg {
  width: 15px;
- fill: #eee;
+ fill: red;
 }
 
 .trash-btn:hover {
- background: #ff3636;
+ background: white;
 }
 
 .trash-btn:hover .text {

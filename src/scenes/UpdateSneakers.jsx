@@ -92,7 +92,7 @@ export default function UpdateSneakers({
   return (
     <>
       <button onClick={handleShow} type="submit" className="edit-btn">
-        <span class="button__text">Edit Shoe</span>
+        <span class="button__text">Edit</span>
         <span class="button__icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"

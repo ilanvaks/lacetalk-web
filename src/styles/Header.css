@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Kenia&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 
 .header-title {
-  font-family: 'Kenia', cursive;
-  font-weight:450;
-  word-spacing: 2px;
-  font-size: 80px;
+  font-family: 'Bungee Shade', cursive;
+  font-weight: 900;
+  font-size: 40px;
 }
+
+
 
 .info-header{
   font-family: 'Nunito Sans', sans-serif;

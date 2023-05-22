@@ -7,11 +7,11 @@ export default function ThreeThings() {
     <div class="three-thing-card">
     
     <section>
-      <Container fluid id="three-things" className="p-5">
+      <Container fluid id="three-things">
 
       <div style={{ marginTop: '-10px', fontSize: '1.5em' }}>
       <Row>
-          <Col><h2 className="title-threethings text-center">The Sneaker Chronicles:
+          <Col><h2 className="title-threethings text-center">The Sneaker Chronicles
           </h2>
           </Col>
         </Row>
