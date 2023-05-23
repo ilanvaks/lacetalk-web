@@ -3,7 +3,7 @@
 .header-title {
   font-family: 'Bungee Shade', cursive;
   font-weight: 900;
-  font-size: 40px;
+  font-size: clamp(1.8rem, 5vw, 4rem);
 }
 
 
@@ -22,6 +22,7 @@
   color: white;
   text-decoration: none;
   border-radius: 4px;
+  font-size: 20px;
 }
 
 .button-effect-collection{

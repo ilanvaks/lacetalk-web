@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Form, Row } from "react-bootstrap";
 import { toast } from "react-toastify"
+import Footer from "../components/Footer/Footer";
 import "../styles/AddSneaker.css";
 
 export default function AddSneaker({ setSneakers }) {
@@ -151,6 +152,7 @@ export default function AddSneaker({ setSneakers }) {
           </button>
         </div>
       </Form>
+      <Footer/>
     </div>
   );
 }

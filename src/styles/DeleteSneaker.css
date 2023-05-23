@@ -8,7 +8,7 @@
  border-radius: 5px;
  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
  background: white;
- border: 1px solid black;
+ border: 1px solid #c1c1c1;
  transform: scale(.9);  
 }
 
@@ -18,13 +18,15 @@
 
 .trash-btn .text {
  transform: translateX(35px);
- color: gray;
- font-weight: bold;
+ color: #c01010;
+ font-weight: 400;
+  font-size: 0.9rem;
+ 
 }
 
 .trash-btn .icon {
  position: absolute;
- border-left: 1px solid #c41b1b;
+ border-left: 1px solid #c1c1c1;
  transform: translateX(110px);
  height: 40px;
  width: 40px;
@@ -34,8 +36,8 @@
 }
 
 .trash-btn svg {
- width: 15px;
- fill: red;
+ width: 10px;
+ fill: #c01010;
 }
 
 .trash-btn:hover {

@@ -94,8 +94,10 @@ import "../styles/Home.css";
                 <h2 className="modal-text1">Name: {selectedSneaker.title}</h2>
               <h2 className="modal-text1">Release: {selectedSneaker.release}</h2>
               <h2 className="modal-text1">Brand: {selectedSneaker.brand}</h2>
-              <a className="modal-text1" href={selectedSneaker.link}>{selectedSneaker.link}</a>
-              <p>About: {selectedSneaker.about}</p>
+              <p className="about-text">About: {selectedSneaker.about}</p>
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <Button variant="outline-dark" size="lg" className="buy-btn" href={selectedSneaker.link}>Buy Now</Button>
+              </div>
               {selectedSneaker.youtubeLink && (
             <div>
               <a
@@ -109,11 +111,16 @@ import "../styles/Home.css";
             </div>
           )}
             </div>
-            <Modal.Footer className="d-flex">
-              <div className="del-edit-btn">
+            
+              <div className="del-edit-btn mt-4">
                 <div className="update1-btn me-3">
               <UpdateSneakers
               sneakerId={selectedSneaker._id}
+              currentAbout={selectedSneaker.about}
+              currentTitle={selectedSneaker.title}
+              currentLink={selectedSneaker.link}
+              currentBrand={selectedSneaker.brand}
+              currentRelease={selectedSneaker.release}
               sneakers={sneakers}
               setSneakers={setSneakers}
               setShowModal={setShowModal}
@@ -128,11 +135,12 @@ import "../styles/Home.css";
               />
               </div>
             </div>
-            </Modal.Footer>
+            
             </Modal.Body>
         </Modal>
         </div>
       )}
+      <Footer/>
     </>
   );
 }

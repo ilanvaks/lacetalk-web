@@ -33,36 +33,37 @@ export default function NavMenu({ user, setUser }) {
   return (
     <Navbar className="custom-navbar" variant="dark" expand="lg">
       <Container fluid>
+        <Navbar.Brand className="brand-container"  as={Link} to="/">
+          <img src="./images/banner.png" alt="" /></Navbar.Brand>
         
-        <Navbar.Brand className="brand-container"  as={Link} to="/">LaceTalk</Navbar.Brand>
-        
-        <div className="right-container">
-        <Nav className="mr-auto">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="ms-auto">
           {!user ? (
-            <Nav.Link as={Link} to="/Login">
+            <Nav.Link className="right-container" as={Link} to="/Login">
               Add Sneaker
             </Nav.Link>
           ) : (
-            <Nav.Link as={Link} to="/AddSneaker">
+            <Nav.Link className="right-container" as={Link} to="/AddSneaker">
               Add Sneaker
             </Nav.Link>
           )}
           {!user ? (
-            <Nav.Link as={Link} to="/Login">
+            <Nav.Link className="right-container" as={Link} to="/Login">
               Login
             </Nav.Link>
           ) : (
             <>
-              <Nav.Link style={{ pointerEvents: "none" }}>
+              <Nav.Link className="right-container" style={{ pointerEvents: "none" }}>
                 {user.displayName}
               </Nav.Link>
-              <Nav.Link as={Link} onClick={handleLogout}>
+              <Nav.Link className="right-container" as={Link} onClick={handleLogout}>
                 Logout
               </Nav.Link>
             </>
           )}
         </Nav>
-        </div>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );

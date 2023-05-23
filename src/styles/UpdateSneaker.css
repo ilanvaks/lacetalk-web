@@ -3,16 +3,16 @@
 }
 
 .edit-btn {
-  position: relative;
   width: 155px;
   height: 50px;
   cursor: pointer;
+  position: relative;
   display: flex;
   align-items: center;
   background-color: white;
   border-radius: 5px;
-  border: 1px solid black;
-  border-right: 1px solid black !important;
+  border: 1px solid #c1c1c1;
+  border-right: 1px solid #c1c1c1 !important;
   transform: scale(.9);  
 }
 
@@ -26,7 +26,8 @@
 .edit-btn .button__text {
   transform: translateX(30px);
   color: blue;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 0.9rem;
 }
 
 .edit-btn .button__icon {
@@ -38,20 +39,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-left: 1px solid black;
-  border-right: 1px solid black !important;
+  border-left: 1px solid #c1c1c1;
+  border-right: 1px solid #c1c1c1;
+  /* border-right: 1px solid black !important; */
   /* border-right: 1px solid black; */
   /* border: 1px solid black; */
 }
 
-.edit-btn .svg {
-  width: 30px;
-  stroke: blue;
+ .svg {
+  width: 16px;
+  fill: #c01010;
 }
 
 .edit-btn:hover {
   background: white;
-  /* border-right: none !important; */
+  border-right: none !important;
+  border-left: none;
 }
 
 .edit-btn:hover .button__text {
@@ -237,3 +240,13 @@ button svg {
   border: 2px solid #000; /* Change #000 to the color you want */
   border-radius: 8px;
 }
+
+
+
+
+
+
+
+
+
+

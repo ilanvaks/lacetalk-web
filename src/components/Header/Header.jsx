@@ -7,7 +7,7 @@ export default function Header() {
 
   return (
     <main>
-      <Container fluid className="header-container p-5" id="intro">
+      <Container fluid className="header-container my-5 p-5" id="intro">
         <Row className="d-flex align-items-center justify-content-center">
           <Col sm={11} md={6}>
             <Image 
@@ -16,7 +16,7 @@ export default function Header() {
           </Col>
 
           <Col sm={11} md={6}>
-             <h1 className="header-title text-black starter-header text-center text-lg-start">Kickstarting by bringing Sneakerheads together</h1>
+             <h1 className="header-title text-black starter-header text-center text-lg-start my-4">Kickstarting by bringing Sneakerheads together</h1>
               <p className="info-header text-black">The place where sneaker collectors from all over the world can come together and collectively share info.</p>
               <HashLink 
                 to="/#collection" 
@@ -28,7 +28,7 @@ export default function Header() {
                   color: 'white',
                   textDecoration: 'none',
                   borderRadius: '4px',
-                  border: 'solid black 1px'
+                  border: 'solid black 2px'
                 }}
               >COLLECTION</HashLink>
           </Col>

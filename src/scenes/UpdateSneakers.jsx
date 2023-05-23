@@ -95,7 +95,7 @@ export default function UpdateSneakers({
         <span class="button__text">Edit</span>
         <span class="button__icon">
           <svg
-            xmlns="http://www.w3.org/2000/svg"
+            // xmlns="http://www.w3.org/2000/svg"
             width="24"
             viewBox="0 0 24 24"
             stroke-width="2"
@@ -115,7 +115,7 @@ export default function UpdateSneakers({
         show={show}
         onHide={handleClose}
         className="d-flex align-items-center"
-        size="lg"
+        size="md"
       >
         <div className="whole-form-card">
           <Modal.Header>

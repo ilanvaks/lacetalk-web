@@ -55,7 +55,8 @@
 }
   
 .right-container{
-  color: white !important;
+  color: rgba(255, 255, 255, 0.502) !important;
+  font-size: clamp(1.0rem, 2vw, 1.1rem) !important;
 }
 
 .custom-navbar{
@@ -67,8 +68,12 @@
 } 
 
 .brand-container {
-  font-size: 60px;
+  font-size: clamp(1.0rem, 2vw, 1.2rem) !important;
   color: white !important;
+}
+
+.brand-container img {
+  height: 40px;
 }
 
 .AboutMe-container {
@@ -79,3 +84,46 @@
   font-size: 30px;
 }
 
+
+
+
+
+
+
+.buy-btn {
+  width: 300px;
+  font-size: clamp(1.1rem, 3vw, 1.2rem);
+  padding: 10px;
+  cursor: pointer;
+  transform: scale(1.0);
+  background-color: black;
+  color: white;
+  transition: transform 0.23s ease-in-out;
+}
+
+
+/* Disable hover effects on mobile */
+@media (max-width: 768px) {
+  .buy-btn:hover
+  {
+      transform: scale(1.0);
+      filter: none;
+  }
+}
+
+
+
+.modal-text1{
+  border-bottom: black solid 1px;
+  padding: 5px;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+}
+
+.about-text{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: clamp(0.8rem, 3vw, 0.9rem);
+}
+
+footer {
+  margin-top: 100px;
+}
