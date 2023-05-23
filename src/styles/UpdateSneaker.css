@@ -1,88 +1,65 @@
 .modal-backdrop.show {
-  backdrop-filter: blur(4px); 
+  backdrop-filter: blur(4px);
 }
-
 .edit-btn {
-  width: 155px;
+  width: 160px;
   height: 50px;
   cursor: pointer;
-  position: relative;
   display: flex;
   align-items: center;
-  background-color: white;
+  background: white;
   border-radius: 5px;
-  border: 1px solid #c1c1c1;
-  border-right: 1px solid #c1c1c1 !important;
-  transform: scale(.9);  
-}
-
-
-
-.edit-btn, .button__icon, .button__text {
-  transition: all 0.3s;
-  /* border-right: none !important; */
-}
-
-.edit-btn .button__text {
-  transform: translateX(30px);
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+  background: white;
+  border: 1px solid #C1C1C1;
+  transform: scale(.9);
+ }
+ .edit-btn, .edit-btn span {
+  transition: 200ms;
+ }
+ .edit-btn .text {
+  transform: translateX(35px);
   color: blue;
   font-weight: 400;
-  font-size: 0.9rem;
-}
-
-.edit-btn .button__icon {
+   font-size: 0.9rem;
+ }
+ .edit-btn .icon {
   position: absolute;
-  transform: translateX(109px);
+  border-left: 1px solid #C1C1C1;
+  transform: translateX(110px);
   height: 40px;
-  width: 39px;
-  background-color: white;
+  width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-left: 1px solid #c1c1c1;
-  border-right: 1px solid #c1c1c1;
-  /* border-right: 1px solid black !important; */
-  /* border-right: 1px solid black; */
-  /* border: 1px solid black; */
-}
-
- .svg {
-  width: 16px;
-  fill: #c01010;
-}
-
-.edit-btn:hover {
+ }
+ .edit-btn svg {
+  /* width: 100px; */
+  fill: #C01010;
+ }
+ .edit-btn:hover {
   background: white;
-  border-right: none !important;
-  border-left: none;
-}
-
-.edit-btn:hover .button__text {
+ }
+ .edit-btn:hover .text {
   color: transparent;
-}
-
-.edit-btn:hover .button__icon {
-  width: 148px;
+ }
+ .edit-btn:hover .icon {
+  width: 150px;
+  border-left: none;
   transform: translateX(0);
-  /* border-right: none !important; */
-  /* border-right: 1px solid black; */
-}
-
-.edit-btn:active .button__icon {
-  background-color: #2e8644;
-  /* border: 1px solid black; */
-}
-
-.edit-btn:active {
-  border: 1px solid #2e8644;
-}
-
+ }
+ .edit-btn:focus {
+  outline: none;
+ }
+ .edit-btn:active .icon svg {
+  transform: scale(0.8);
+ }
 .editform-btn {
   position: relative;
   outline: 0;
   border: 1px solid transparent;
-  background-color: #488aec;
-  color: #ffffff;
+  background-color: #488AEC;
+  color: #FFFFFF;
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 700;
@@ -98,7 +75,6 @@
   overflow: hidden;
   box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
 }
-
 .editform-btn span {
   height: 100%;
   width: 100%;
@@ -108,38 +84,30 @@
   gap: 0.75rem;
   transition: all .4s ease;
 }
-
 button svg {
   width: 1.25rem;
   height: 1.25rem;
 }
-
 .editform-btn span:nth-child(2),.editform-btn span:nth-child(3) {
   position: absolute;
   top: 40px;
   color: #fff;
 }
-
 .editform-btn span:nth-child(2) {
-  background-color: #488aec;
+  background-color: #488AEC;
 }
-
 .editform-btn span:nth-child(3) {
-  background-color: #488aec;
+  background-color: #488AEC;
 }
-
 .editform-btn:hover {
   box-shadow: 0 10px 15px -3px #488aec4f, 0 4px 6px -2px #488aec17;
 }
-
 .editform-btn:hover span:nth-child(2), .editform-btn:focus span:nth-child(3) {
   top: 0;
 }
-
 .editform-btn:focus {
   box-shadow: none;
 }
-
 .singup {
   color: #000;
   text-transform: uppercase;
@@ -149,7 +117,6 @@ button svg {
   font-size: x-large;
   margin-top: 1.5em;
 }
-
 .whole-form-card {
   justify-content: center;
   align-items: center;
@@ -163,17 +130,14 @@ button svg {
         -16px -16px 32px rgba(0, 206, 209, 0.744);
   border-radius: 8px;
 }
-
 .modal{
   --bs-modal-header-border-color:transparent !important;
 }
-
 .inputBox,
 .inputBox1 {
   position: relative;
   width: 450px;
 }
-
 .inputBox input,
 .inputBox1 input {
   width: 100%;
@@ -188,7 +152,6 @@ button svg {
   transition: 0.1s;
   border-bottom-left-radius: 8px;
 }
-
 .inputBox span,
 .inputBox1 span {
   margin-top: 5px;
@@ -205,7 +168,6 @@ button svg {
   letter-spacing: 3px;
   border-radius: 8px;
 }
-
 .inputBox input:valid~span,
 .inputBox input:focus~span {
   transform: translateX(113px) translateY(-15px);
@@ -216,7 +178,6 @@ button svg {
   color: #fff;
   border: 2px;
 }
-
 .inputBox1 input:valid~span,
 .inputBox1 input:focus~span {
   transform: translateX(156px) translateY(-15px);
@@ -227,7 +188,6 @@ button svg {
   color: #fff;
   border: 2px;
 }
-
 .inputBox input:valid,
 .inputBox input:focus,
 .inputBox1 input:valid,
@@ -235,18 +195,7 @@ button svg {
   border: 2px solid #000;
   border-radius: 8px;
 }
-
 .optionBox select {
   border: 2px solid #000; /* Change #000 to the color you want */
   border-radius: 8px;
 }
-
-
-
-
-
-
-
-
-
-
