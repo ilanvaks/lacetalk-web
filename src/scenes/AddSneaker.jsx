@@ -152,7 +152,6 @@ export default function AddSneaker({ setSneakers }) {
           </button>
         </div>
       </Form>
-      <Footer/>
     </div>
   );
 }
