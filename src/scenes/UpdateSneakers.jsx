@@ -1,10 +1,9 @@
-import { useState } from "react";
-import { Form, Button } from "react-bootstrap";
-import { useEffect } from "react";
-import { Modal } from "react-bootstrap";
+import { useState, useEffect } from "react";
+import { Form, Button, Modal } from "react-bootstrap";
 import { toast } from "react-toastify";
-import { PencilSquare, TrashFill } from "react-bootstrap-icons";
 import "../styles/UpdateSneaker.css";
+import { getAuth } from "firebase/auth";
+
 export default function UpdateSneakers({
   sneakerId,
   setSneakers,
@@ -17,17 +16,15 @@ export default function UpdateSneakers({
   currentYoutubeLink,
   setShowModal,
 }) {
-  const [selectedSneaker, setSelectedSneaker] = useState(false);
   const [title, setTitle] = useState("");
   const [poster, setPoster] = useState("");
   const [link, setLink] = useState("");
   const [release, setRelease] = useState("");
   const [brand, setBrand] = useState("");
   const [about, setAbout] = useState("");
-  const [thumbsUp, setThumbsUp] = useState(0);
-  const [thumbsDown, setThumbsDown] = useState(0);
-  const [show, setShow] = useState(false);
   const [youtubeLink, setYoutubeLink] = useState("");
+  const [show, setShow] = useState(false);
+
   useEffect(() => {
     setTitle(currentTitle);
     setPoster(currentPoster);
@@ -37,31 +34,41 @@ export default function UpdateSneakers({
     setAbout(currentAbout);
     setYoutubeLink(currentYoutubeLink);
   }, []);
+
   const handleShow = () => setShow(true);
-  const handleClose = () => {
-    setShow(false);
-  };
+  const handleClose = () => setShow(false);
+
   function convertFile(files) {
     if (files) {
-      // picks the first file from all the files selected
       const fileRef = files[0] || "";
-      // picks the type so that it can send the right one to the database
       const fileType = fileRef.type || "";
-      // sets reader as a new FileReader instance
       const reader = new FileReader();
-      // converts fileref (the File) to a binary string
       reader.readAsBinaryString(fileRef);
       reader.onload = (ev) => {
-        // convert it to base64
         setPoster(`data:${fileType};base64,${window.btoa(ev.target.result)}`);
       };
     }
   }
-  const handleEdit = (e) => {
+
+  const handleEdit = async (e) => {
     e.preventDefault();
+
+    const auth = getAuth();
+    const user = auth.currentUser;
+
+    if (!user) {
+      toast.error("You must be logged in to update.");
+      return;
+    }
+
+    const token = await user.getIdToken();
+
     fetch(`https://lacetalk-iv.web.app/sneaker/${sneakerId}`, {
       method: "PATCH",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`,
+      },
       body: JSON.stringify({ title, poster, link, release, brand, about }),
     })
       .then((resp) => resp.json())
@@ -72,7 +79,7 @@ export default function UpdateSneakers({
         }
         setSneakers(data);
         setTitle("");
-        setPoster();
+        setPoster("");
         setLink("");
         setRelease("");
         setBrand("");
@@ -80,7 +87,6 @@ export default function UpdateSneakers({
         setShow(false);
         setShowModal(false);
         toast.success("Sneaker Updated!");
-        // resetFormFields()
       })
       .catch(alert);
   };

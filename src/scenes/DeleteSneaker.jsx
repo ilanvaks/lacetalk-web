@@ -3,29 +3,44 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify"
 import { Trash } from "react-bootstrap-icons";
 import "../../src/styles/DeleteSneaker.css";
+import { getAuth } from "firebase/auth";
 
 export default function DeleteSneaker({ sneakerId, setSneakers, showModal, setShowModal }) {
   const navigate = useNavigate();
 
-  const handleDelete = (e) => {
+  const handleDelete = async (e) => {
     e.preventDefault();
+
+    const auth = getAuth();
+    const user = auth.currentUser;
+
+    if (!user) {
+      // If there's no user signed in, inform the user and exit the function
+      toast.error("You must be logged in to delete.");
+      return;
+    }
+
+    // Obtain the user's ID token
+    const token = await user.getIdToken();
 
     fetch(`https://lacetalk-iv.web.app/sneaker/${sneakerId}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
+        // Add the user's token to the request headers
+        "Authorization": `Bearer ${token}`,
       },
     })
-      .then((resp) => resp.json())
-      .then((data) => {
-        setSneakers(data);
-        setShowModal(false)
-        toast.success("Sneaker has been deleted")
-      })
-      .catch((error) => {
+    .then((resp) => resp.json())
+    .then((data) => {
+      setSneakers(data);
+      setShowModal(false)
+      toast.success("Sneaker has been deleted")
+    })
+    .catch((error) => {
       console.error(error)
       toast.error("Failed to delete.")
-      }) 
+    }); 
   };
 
   

@@ -1,15 +1,21 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+import { toast } from "react-toastify"
+import { useNavigate } from "react-router-dom";
 import { IoMdThumbsUp as ThumbsUp, IoMdThumbsDown as ThumbsDown } from 'react-icons/io'
 import "../styles/UpdateVote.css"
 import { getAuth } from "firebase/auth";
 
 export default function UpdateVote({ sneakerId, sneaker, setSneakers }) {
+
+  const navigate = useNavigate();
+
   const auth = getAuth();
 
   const voteUp = async () => {
     if (!auth.currentUser) {
-      alert("Please log in to vote");
+      navigate("/Login")
+      toast.success("Please Login to vote")
       return;
     }
     try {
@@ -27,7 +33,8 @@ export default function UpdateVote({ sneakerId, sneaker, setSneakers }) {
 
   const voteDown = async () => {
     if (!auth.currentUser) {
-      alert("Please log in to vote");
+      navigate("/Login")
+      toast.success("Please Login to vote")
       return;
     }
     try {
