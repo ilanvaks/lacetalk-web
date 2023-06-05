@@ -15,22 +15,19 @@ export default function DeleteSneaker({ sneakerId, setSneakers, showModal, setSh
     const user = auth.currentUser;
 
     if (!user) {
-      // If there's no user signed in, inform the user and exit the function
       toast.error("You must be logged in to delete.");
       return;
     }
 
-    // Obtain the user's ID token
     const token = await user.getIdToken();
 
     fetch(`https://lacetalk-iv.web.app/sneaker/${sneakerId}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-        // Add the user's token to the request headers
         "Authorization": `Bearer ${token}`,
-      },
-    })
+        "check": localStorage.getItem("check")},
+       })
     .then((resp) => resp.json())
     .then((data) => {
       setSneakers(data);

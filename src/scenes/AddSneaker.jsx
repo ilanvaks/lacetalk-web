@@ -20,7 +20,8 @@ export default function AddSneaker({ setSneakers }) {
 
     fetch("https://lacetalk-iv.web.app/sneaker", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", 
+      "check": localStorage.getItem("check")},
       body: JSON.stringify({
         title,
         poster,

@@ -42,6 +42,36 @@ export default function Login({ user, setUser, setInUser }) {
     navigate("/signup");
   }
 
+  const handleJSubmit = (e) => {
+    e.preventDefault();
+  
+    fetch("https://lacetalk-iv.web.app/join", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password
+      }),
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Wrong Email or Password");
+        }
+        return response.json();
+      })
+      .then(data => {
+        localStorage.setItem("jwt", data["x-auth-token"]);
+        setUser(data);
+        navigate("/home");
+      })
+      .catch(error => {
+        console.error("An error occurred:", error);
+      });
+  };
+  
+
   // const handleLogout = () => {
   //   signOut(auth)
   //     .then(() => {
@@ -82,7 +112,7 @@ export default function Login({ user, setUser, setInUser }) {
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicCheckbox"></Form.Group>
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="submit" onClick={handleJSubmit}>
         Submit
       </Button>
       <Button variant="secondary" onClick={handleSignUp}>
